@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CV</title>
+</head>
+<body>
+    <u><h1 style="text-align: center;">Curriculum Vitae</h1></u>
+        <u><h2 style="text-align: center;">Informazioni personali</h2></u>
+        <style>
+            p {
+                text-align: left;
+                display: block;
+                margin-left: 50%;
+                margin: right 70px;
+
+               
+            }
+            h2 {
+                text-align: center;
+                text-align: end;
+            }
+            h1 {
+                text-align: center;
+                color: aqua;
+            }
+            body {
+                background-color: blue;
+                color: white;
+                size: 100px;
+            }
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+            table{
+    width: 90%;
+    border-collapse: collapse;
+    border: 1px solid blue;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    color: red;
+    background: green
+    ;
+}
+
+td{
+    background: silver;
+    color: brown;
+}
+           
+        </style>
+        <img src="images/foto.jpeg" alt="20">
+        <table>
+            <th> Nome</th>
+            <th> Cognome</th>
+            <th> Data di nascita</th>
+            <th> Luogo di nascita</th>
+            <th> Indirizzo</th>
+            <th> Città</th>
+            <th> Telefono</th>
+            <th> Email</th>
+            <th> Linkedin</th>
+            <tr>
+                <td> SERGE</td>
+                <td> GUEA</td>
+                <td> 10/05/1999</td>
+                <td> Costa D'avorio</td>
+                <td> Via Virgilio 19</td>
+                <td> FORMIA</td>
+                <td> +39 389 297 8507</td>
+                <td> gueaserge2@gmail.com </td>
+                <td> https://www.linkedin.com/in/serge-guea-0b1b1b1b9/</td>
+            </tr>   
+        </table>
+
+    <p>Nome: <strong>SERGE</strong></p>
+    <p>Cognome: <strong>GUEA</strong></p>
+    <p>Data di nascita: <strong>10/05/1999</strong></p>
+    <p>Luogo di nascita: <strong>Costa D'avorio</strong></p>
+    <p>Indirizzo: <strong>Via Virgilio 19</strong></p>
+    <p>Città: <strong>FORMIA</strong></p>
+    <p>Telefono: <strong>+39 389 297 8507</strong></p>
+    <p>Email: <strong> gueaserge2@gamil.com</strong></p>
+    <p>Linkedin: <strong>https://www.linkedin.com/in/serge-guea-0b1b1b1b9/</strong></p>
+
+    <form method="get">
+        <fieldset>
+            <legend>Informazioni personali</legend>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome">
+        <label for="cognome">Cognome</label>
+        <input type="text" id="cognome" name="cognome" placeholder="Inserisci il tuo cognome">
+        <label for="data di nascita">Data di nascita</label>
+        <input type="date" id="data di nascita" name="data di nascita" placeholder="Inserisci la tua data di nascita">
+        <label for="luogo di nascita">Luogo di nascita</label>
+        <input type="text" id="luogo di nascita" name="luogo di nascita" placeholder="Inserisci il tuo luogo di nascita">
+        <label for="indirizzo">Indirizzo</label>
+        <input type="text" id="indirizzo" name="indirizzo" placeholder="Inserisci il tuo indirizzo">
+        <label for="città">Città</label>
+        <input type="text" id="città" name="città" placeholder="Inserisci la tua città">
+        <label for="telefono">Telefono</label>
+        <input type="text" id="telefono" name="telefono" placeholder="Inserisci il tuo telefono">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Inserisci la tua email">
+        <label for="linkedin">Linkedin</label>
+        <input type="text" id="linkedin" name="linkedin" placeholder="Inserisci il tuo Linkedin">
+        <label for ="codice sconto ">codice sconto</label>
+        <input type="text" id="codice sconto" name="codice sconto" placeholder="Inserisci il tuo codice sconto">
+        <label for="login">Login</label>
+        <input type="text" id="login" name="login" placeholder="Inserisci il tuo login">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Inserisci la tua password">
+        <input type="submit" value="Invia">
+        </fieldse>
+    </form>
+    <hr>
+    <form name="form1" action="UrlServlet" method="POST">
+        <label> Tipo di pagamento </label> <br>
+        <input type="radio" name="tipoPag" value="bonifico_bancario" checked > 
+        <label> Bonifico Bancario </label> 
+        <input type="radio" name="tipoPag" value="carta_di_credito"/> 
+        <label> Carta di Credito </label> 
+        <input type="radio" name="tipoPag" value="paypal"/> 
+        <label> Paypal </label> 
+    </form>
+    <hr>
+    <form name="form1" action="UrlServlet" method="POST">
+        <label> Tipo di spedizione </label> <br>
+        <input type="radio" name="tipoSped" value="corriere" checked > 
+        <label> Corriere </label> 
+        <input type="radio" name="tipoSped" value="posta"/> 
+        <label> Posta </label> 
+        <input type="radio" name="tipoSped" value="ritiro presso il negozio"/> 
+        <label> Ritiro presso il negozio </label>
+    </form>
+
+    <hr>
+    <form name="form1" action="urlServlet" method="POST">
+	    <label> Carburante </label>
+	    <select name="carburante">
+		<option value="benzina" selected> Benzina </option>
+		<option value="gasolio"> Gasolio </option>
+		<option value="gpl"> GPL </option>
+		<option value="metano"> Metano </option>
+	    </select>
+    </form>
+    <hr>
+    <form name="form1" action="urlServlet" method="POST">
+        <label> Carburante </label>
+        <select name="carburante" size="3">
+        <option value="benzina" selected> Benzina </option>
+        <option value="gasolio"> Gasolio </option>
+        <option value="gpl"> GPL </option>
+        <option value="metano"> Metano </option>
+        </select>
+</form>
+    <hr>
+    <form name="form1" action="UrlServlet" method="GET">
+	    <label for="nome"> Nome </label>
+	    <input type="text" name="nome" id="nome" value=""> <br>
+	    <label for="cognome"> Cognome </label>
+    <input type="text" name="cognome" id="cognome" value=""> <br> <br>
+
+	    <label> Maschio </label>
+    <input type="radio" name="sesso" value="M"> <br>
+	    <label> Femmina </label>
+	    <input type="radio" name="sesso" value="F"> <br> <br>
+
+	    <label> Iscriviti </label>
+	    <input type="checkbox" name="iscrizione" value="yes"> <br>
+
+	    <button type="submit" name="invia" value="dati"> Invia </button>
+	    <button type="reset" name="reset" value=""> Annulla </button>
+
+</form>
+
+
+     <u><h2 style="text-align: center;">Formazione</h2></u> 
+
+     
+        <u><h2 style="text-align: center;">Esperienze lavorative</h2></u>
+        <style>
+            
+            
+            
+        </style>
+        <p>2019-2020: <strong>Stage presso la scuola media "G. Marconi" di Formia</strong></p>
+
+        <script>
+            fun
+        </script>
+</body>
+</html>
