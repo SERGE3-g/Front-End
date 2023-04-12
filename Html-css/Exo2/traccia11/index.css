@@ -1,0 +1,27 @@
+h1{
+    color: red;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+h2{
+    color: blue;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-color: rgb(153, 192, 202);
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    display: inline;
+  }

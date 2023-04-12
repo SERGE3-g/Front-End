@@ -1,0 +1,397 @@
+* {
+    box-sizing: border-box;
+    padding: 1%;
+    margin: 5px;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    background: rgb(167, 182, 170);
+    padding: 5px 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+
+.logo a,
+.toggle a {
+    font-size: 20px;
+}
+
+.button.secondary {
+    border-bottom: 1px #444 solid;
+}
+
+/* Mobile menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    order: 1;
+}
+
+.item.button {
+    order: 2;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.item.active {
+    display: block;
+}
+
+/* Navbar Toggle */
+.toggle {
+    cursor: pointer;
+}
+
+.bars {
+    background: #999;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    transition: 2s ease-out;
+    width: 18px;
+}
+
+.bars:before,
+.bars:after {
+    background: #999;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.bars:before {
+    top: 5px;
+}
+
+.bars:after {
+    top: -5px;
+}
+
+/* Tablet menu */
+@media all and (min-width: 468px) {
+    .menu {
+        justify-content: center;
+    }
+
+    .logo {
+        flex: 1;
+
+    }
+
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+
+    .toggle {
+        order: 2;
+    }
+
+    .button.secondary {
+        border: 0;
+    }
+
+    .button a {
+        padding: 7.5px 15px;
+        background: teal;
+        border: 1px #006d6d solid;
+        border-radius: 50em;
+    }
+
+    .button.secondary a {
+        background: transparent;
+    }
+
+    .button a:hover {
+        text-decoration: none;
+        transition: all .25s;
+    }
+
+    .button:not(.secondary) a:hover {
+        background: #006d6d;
+        border-color: #005959;
+    }
+
+    .button.secondary a:hover {
+        color: #ddd;
+    }
+}
+
+/* Desktop menu */
+@media all and (min-width: 768px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .item {
+        order: 1;
+    }
+
+    .button {
+        order: 2;
+    }
+
+    .menu li {
+        padding: 15px 10px;
+    }
+
+    .menu li.button {
+        padding-right: 0;
+    }
+
+    h1 {
+        font-size: large;
+        color: darkmagenta;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    }
+
+    h2 {
+        font-size: medium;
+        color: rgb(0, 139, 63);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    article {
+        font-size: small;
+        color: rgb(0, 0, 0);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    body {
+        background-color: rgb(20, 172, 199);
+    }
+
+    .carousel {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .carousel .slides {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .carousel .slides .slide {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .carousel .slides .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel .slides .slide .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+        text-align: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .carousel .slides .slide .content h2 {
+        font-size: 40px;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .carousel .slides .slide .content p {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+    }
+
+    .carousel .slides .slide .content .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #fff;
+        color: #000;
+        text-decoration: none;
+        margin-top: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 5px;
+    }
+
+    .carousel .slides .slide .content .btn:hover {
+        background: #000;
+        color: #fff;
+    }
+
+    .carousel .slides .slide .content .btn.btn-white {
+        background: #fff;
+        color: #000;
+    }
+
+    .carousel .slides .slide .content .btn.btn-white:hover {
+        background: #000;
+        color: #fff;
+    }
+
+    .carousel .slides .slide .content .btn.btn-black {
+        background: #000;
+        color: #fff;
+    }
+
+    .carousel .slides .slide .content .btn.btn-black:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    .carousel .slides .slide .content .btn.btn-transparent {
+        background: transparent;
+        color: #fff;
+    }
+
+    .carousel .slides .slide .content .btn.btn-transparent:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background: #11b127;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+
+    .carousel-control-next:hover,
+    .carousel-control-prev:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    .carousel-control-next {
+        right: 15px;
+    }
+
+    .carousel-control-prev {
+        left: -5px;
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+    }
+
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        margin: 0 5px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+
+    .carousel-indicators .active {
+        background: #11b127;
+    }
+
+    .carousel-indicators li:hover {
+        background: #11b127;
+    }
+
+    .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .carousel-item {
+        position: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: auto;
+        transition: all .5s ease;
+    }
+
+    div {
+        display: block;
+
+    }
+}

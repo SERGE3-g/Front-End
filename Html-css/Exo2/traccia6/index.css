@@ -1,0 +1,21 @@
+h1{
+    color: red;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-color: #09164e;
+}
+p1{
+    border-style: dashed;
+    background-color: #ff0000;
+    padding: 5px;
+    padding-left: 10px
+}
+p2{
+    border-style: double;
+    background-color: #00ff00;
+    padding: 5px;
+    padding-left: 10px;
+}

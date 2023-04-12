@@ -1,0 +1,36 @@
+body {
+    background-image: url("m01.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+h1 {
+text-align: center;
+color: rgb(199, 97, 39);
+font-size: 50px;
+font-family: 'Courier New', Courier, monospace;
+}
+section , .container {
+width: 450px;
+margin: 30px auto;
+border: 2px solid rgb(70, 204, 8);
+}
+.container {
+display: flex;
+justify-content: space-between;
+}
+.red {
+width: 200px;
+height: 200px;
+border: 5px solid red;
+}
+.green {
+width: 200px;
+height: 200px;
+border: 5px solid green;
+}
+p {
+text-align: center;
+color: rgb(185, 31, 31);
+font-style: italic;
+}

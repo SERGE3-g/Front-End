@@ -1,0 +1,17 @@
+body {
+    background-color: #aec9c9;
+}
+h1 {
+    text-align: center;
+    color: #ff0000;
+}
+.container {
+    margin-top: 30px;
+    border: 1px solid #ff0000;
+    padding: 10px;
+}
+p {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+    color: #000000;
+}
