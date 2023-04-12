@@ -78,7 +78,7 @@ caso non usiamo i label, ma i segnaposto -->
             border: 2px solid #f5f5f5;
             border-radius: 4px;
         }
-        /* Basic styling */
+        /* primo style */
 * {
     box-sizing: border-box;
     padding: 1%;
@@ -252,7 +252,10 @@ caso non usiamo i label, ma i segnaposto -->
 </nav>
 <u><h1>Documento 10</h1> </u>
 <p> In questo paragrafo  troverete il mio form </p> <br>
-<form>
+<form method="get">
+  <fieldset>
+    <legend>Informazioni personali</legend>
+    
   <input type="text" id="fname" name="fname" placeholder="Nome"><br>
   <input type="text" id="lname" name="lname" placeholder="Cognome"><br>
   <input type="text" id="email" name="email" placeholder="Email"><br>
@@ -262,10 +265,11 @@ caso non usiamo i label, ma i segnaposto -->
     <option value="saab">Bmw</option>
     <option value="mercedes">Mercedes</option>
     <option value="audi">Audi</option>
+    </fieldset>
   </select>
   <br>
-  <input type="checkbox" id="scales" name="scales" value="Scales">
-  <label for="scales">Scales</label><br>
+  <input type="checkbox" id="bilancia" name="bilancia" value="bilancia">
+  <label for="bilancia">Bilancia</label><br>
   <input type="checkbox" id="horns" name="horns" value="Horns">
   <label for="horns">Horns</label><br>
   <input type="checkbox" id="strings" name="strings" value="Strings">

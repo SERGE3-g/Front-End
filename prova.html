@@ -1,34 +1,236 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        p {
-            text-align: left;
-        }
-        h2 {
-            text-align: center;
-            text-align: end;
-        }
-        h1 {
-            text-align: center;
-            color: aqua;
-        }
-        body {
-            background-color: blue;
-            color: white;
-            size: 100px;
-        }
-    </style>
-    <
-    <title>Prova HTML</title>
-</head>
-<body>
-    <h1>Prova HTML</h1>
-    <p>Questo è un paragrafo di prova</p>
-    <address>via Virgilio 19</address>
-<p>per ulteriori Informazioni,<a href="mailto: gueaserge2@gmail.com "</p>
-</body>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Prova HTML</title>
+        <!-- commento -->
+        <!-- Se scrivo roba qui, la visualizza nel browser ma è sbagliato e verrà ignorato dai motori di ricerca -->
+    </head>
+    <body>
+        <!-- il cody contiene il contenuto visualizzabile nella pagina -->
+        <h1 style="text-align: center" id="titoloArticolo">Titolo di testata del paragrafo di testo</h1> <!-- una pagina senza h1 viene penalizzata da google-->
+        <h2 style="text-align: center">Sottotitolo di testata</h2>
+
+        <p style="text-align: center"> <!-- tag per paragrafo di testo -->
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> 
+            Sed a pharetra massa. Sed pretium blandit aliquam. In hac habitasse platea dictumst. <br> 
+            In vulputate eros non velit posuere, non dapibus est laoreet. Duis ullamcorper euismod interdum. 
+            Quisque ac ultrices lacus, ultricies faucibus dolor. Nulla facilisi. Nam in molestie libero, 
+            sit amet semper odio. Mauris mollis lectus in malesuada feugiat. Sed dictum condimentum efficitur. <br> 
+            Ut imperdiet tellus accumsan elit maximus, in gravida dolor molestie. Duis ut vulputate nisl. 
+            Nullam bibendum ullamcorper sem, in rutrum turpis pharetra sit amet. <br> Pellentesque tempor pulvinar 
+            ipsum a aliquam. Vivamus non mi bibendum, feugiat dolor vel, pretium magna.
+        </p>
+        <hr size="3" color="black">
+        <!-- esempi di tag di formattazione testo -->
+        <p>
+            <b>Suspendisse</b> ultricies ante vitae tellus tristique interdum. Aenean velit mauris, 
+            tincidunt at dolor non, posuere tristique metus. <strong> Latino </strong>Aliquam erat volutpat. 
+            <i>Curabitur et enim at mauris varius</i> tempor. <em>Cras hendrerit diam eget urna sagittis dictum.</em> 
+            Proin convallis, <mark style="background-color: darkorchid; color: orange">nisi sed consequat mattis</mark>, libero mauris aliquet tortor, sed iaculis elit 
+            <del>lacus quis sem</del>. Sed vitae lectus ut ligula imperdiet pharetra. Phasellus blandit ante mi, 
+            eu iaculis arcu blandit aliquam. <sub>Praesent et nibh in sapien ullamcorper volutpat. </sub>
+            Nullam porttitor quis dolor non cursus. <sup>Ut vitae ipsum lacinia ligula eleifend convallis. </sup>
+            Vestibulum iaculis orci quis mi facilisis, vitae cursus velit rutrum. 
+            Sed bibendum vitae magna a aliquam. <small>Nulla dignissim mauris sit amet vehicula vestibulum. </small>
+            Aliquam velit felis, dapibus bibendum lorem ut, faucibus tempus nunc.
+        </p>
+        <hr size="3" color="black">
+        <p style="color: red; font-size: 18px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+            Contrary to popular belief, Lorem Ipsum is not simply random text. 
+            It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
+            <span style="color: blue">Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,</span>
+            looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, 
+            and going through the cites of the word in classical literature, discovered the undoubtable source.
+        </p>
+        <hr size="3" color="black">
+        <pre>
+            There are many variations of passages of Lorem Ipsum available, 
+            but the majority have suffered alteration in some form, by injected humour, 
+            or randomised words which don't look even slightly believable.
+        </pre>
+        <br>
+        <!-- se noi copiamo una frase da un altro sito, Google ci penalizza se non mettiamo la fonte.
+        Quindi bisogna usare un tag apposta per le citazioni da altre fonti online. la fonte serve per 
+        questioni di SEO -->
+        <p>
+            <blockquote cite="https://www.corriere.it">
+            Superbonus, conviene ancora iniziare adesso i lavori? 
+            Ecco come non perdere gli sconti. Cessione crediti, nuove regole: come cambia
+            </blockquote>
+        </p>
+        <br>
+        <!-- citazione semplice -->
+        <p>E lui disse:<q>Che bella giornata oggi!</q></p>
+        <br>
+        <!-- tag per abbreviazione -->
+        <p>Appunti sul linguaggio <abbr title="Hyper Text Markup Language">HTML</abbr></p>
+        <br>
+        <!-- tag semantico per indirizzi fisici (geolocalizzazione)-->
+        <address>Via Dante Alighieri 20, Rovellasca (CO)</address>
+        <hr size="3" color="black">
+        <p> Cliccando su questo link andrai sulla documentazione per imparare il linguaggio 
+            <a href="https://www.w3schools.com/html/default.asp"> HTML</a>
+        </p>
+        <hr size="3" color="black">
+        <p> Cliccando su questo link andrai sulla documentazione per imparare il linguaggio 
+            <a href="https://www.w3schools.com/sql/default.asp" target="_new"> SQL</a>
+            <!-- target="_blank" apre delle vulnerabilità di sicurezza e di conseguenza si usa _new-->
+        </p>
+        <hr size="3" color="black">
+        <p>Clicca su questo <a href="#titoloArticolo">link</a> per tornare al titolo</p>
+        <hr size="3" color="black">
+        <p>Per ulteriori informazioni, <a href="mailto:prova.testo@gmail.com">link</a> contattaci</p>
+        <!-- per fare la stessa cosa con un numero di telefono si usa tel:+393487654321-->
+        <hr size="3" color="black">
+        <!-- immagini -->
+        <div style="text-align: center">
+            <img src="img/gatto.avif" alt="Foto con un gatto" style="width: 50%; height: 30%; " title="Foto di gatto">
+            <p>Questa è la foto di un gatto</p>
+        </div>
+        <!-- Elenchi e liste -->
+        <!-- elenco puntato -->
+        <hr>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul>
+        <!-- elenco numerato -->
+        <ol>
+            <li>
+                <ol>
+                    <li>Java</li>
+                    <li>Sql</li>
+                </ol>
+            </li>
+            <li>PHP</li>
+            <li>Python</li>
+        </ol>
+
+        <!-- tabelle -->
+        <!-- sono utilizzate di meno dalla versione di HTML 5 perchè sono poco responsive (autoadattanti alle dimensioni+
+            dello schermo)-->
+        <table> <!-- tabella -->
+            <tr> <!-- table row-->
+                <th> <!-- table header-->
+                    Marca
+                </th>
+                <th>
+                    Modello
+                </th>
+                <th>
+                    Anno
+                </th>
+            </tr>
+            <tr>
+                <td> <!-- table data -->
+                    BMW
+                </td>
+                <td>
+                    Serie 5
+                </td>
+                <td>
+                    2019
+                </td>
+            </tr>
+            <tr>
+                <td> <!-- table data -->
+                    Mercedes
+                </td>
+                <td>
+                    Classe A 
+                </td>
+                <td>
+                    2015
+                </td>
+            </tr>
+            <tr>
+                <td> <!-- table data -->
+                    Fiat
+                </td>
+                <td>
+                    Panda
+                </td>
+                <td>
+                    2021
+                </td>
+            </tr>
+        </table>
+        <!-- adesso diamo lo stile alla tabella, lo facciamo con il css ma all'interno del body -->
+        <style type="text/css">
+            table, tr, td, th {
+                border: 1px solid black;
+            }
+            /* per non vedere i bordi doppi*/
+            table {
+                border-collapse: collapse;
+                width:30%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            /*diamo respiro ai dati dentro alle celle*/
+            tr, th, td {
+                padding: 15px;
+            }
+        </style>
+        <hr size="3" color="black">
+        <!-- form -->
+        <!-- permettono all'utente di inserire valori e mandarli come parametri di una http request-->
+        <form method="get"> <!-- ha un attributo action dove si decide l'indirizzo al quale mandare la request che partirà al submit -->
+            <fieldset>
+            <legend>Dati Obbligatori</legend>
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome"> 
+            <br>
+            <label>Cognome: </label>
+            <input type="text" name="cognome" placeholder="Inserisci il tuo cognome">
+            <br>
+            <label>Username: </label>
+            <input type="text" name="username" placeholder="Massimo 20 caratteri" maxlength="20">
+            <br>
+            <label>Password: </label>
+            <input type="password" name="password" placeholder="Minimo 8 caratteri" minlength="8">
+            <br>
+            <label>E-mail: </label>
+            <input type="email" name="email" placeholder="Inserisci il tuo indirizzo di posta elettronica">
+            <br>
+            </fieldset>
+            <fieldset>
+            <legend>Dati Non Obbligatori</legend>
+            <label>Data Nascita: </label>
+            <input type="date" name="dataNasc">
+            <br>
+            <label>Codice sconto: </label>
+            <input type="number" name="codSconto" value="000000">
+            <br>
+            <label>Colore preferito: </label>
+            <input type="color" name="colore">
+            <br>
+            </fieldset>
+            <input type="submit" name="Invia" value="Conferma">
+            <input type="reset" name="pulisci" value="Annulla">
+        </form>
+        <hr size="3" color="black">
+        <form name="form1" action="UrlServlet" method="POST">
+            <label> Tipo di pagamento </label> <br>
+            <input type="radio" name="tipoPag" value="bonifico_bancario" checked > 
+            <label> Bonifico Bancario </label> 
+            <input type="radio" name="tipoPag" value="carta_di_credito"/> 
+            <label> Carta di Credito </label> 
+            <input type="radio" name="tipoPag" value="paypal"/> 
+            <label> Paypal </label> 
+        </form>
+        <hr size="3" color="black">
+        <form name="form1" action="urlServlet" method="POST">
+            <label> Carburante </label>
+            <select name="carburante">
+            <option value="benzina" selected> Benzina </option>
+            <option value="gasolio"> Gasolio </option>
+            <option value="gpl"> GPL </option>
+            <option value="metano"> Metano </option>
+            </select>
+    </form>
+    
+        </body>
 </html>
