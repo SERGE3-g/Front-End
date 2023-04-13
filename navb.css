@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+    background: #f5f5f5;
+  }
+  nav {
+    background: #27b0c2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    color: #d3d7db;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+  nav ul li {
+    padding: 0 20px;
+    cursor: pointer;
+  }
+  nav ul li:hover {
+    color: #007bff;
+  }
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin: 20px 0;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel__item {
+    scroll-snap-align: start;
+    min-width: 200px;
+    height: 300px;
+    margin-right: 20px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .carousel__item img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .carousel__item:last-child {
+    margin-right: 0;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+  }
+  .messaggio {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .messaggio span {
+    font-weight: 500;
+    color: #007bff;
+  }
+  .messaggio span:hover {
+    color: #27b0c2;
+  }
+  .messaggio span:active {
+    color: #007bff;
+  }
+  .messaggio span:visited {
+    color: #27b0c2;
+  }
+  .messaggio span:link {
+    color: #27b0c2;
+  }
+  div .messaggio{
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 20px 0;
+  }
+  div .messaggio span{
+    font-weight: 500;
+    color: #007bff;
+  }
+  button {
+    background: #27b0c2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 20px 0;
+  }
+  button:hover {
+    background: #007bff;
+  }
+  button:active {
+    background: #27b0c2;
+  }
+  footer {
+    background: #27b0c2;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  div .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }

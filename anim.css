@@ -1,11 +1,58 @@
-@keyframes animated-squares {
-    0% {
-        background-color: #10851a;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: #18aab4;
+  }
+  nav {
+    background: #270404;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+  nav ul li {
+    padding: 0 20px;
+    cursor: pointer;
+  }
+  nav ul li:hover {
+    color: #007bff;
+  }
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin: 20px 0;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel__item {
+    scroll-snap-align: start;
+    min-width: 200px;
+    height: 300px;
+    margin-right: 20px;
+    background: #2a2c44;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .carousel__item img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .carousel__item:last-child {
+    margin-right: 0;
+  }
+    .carousel__item:hover {
+        transform: scale(1.1);
     }
-    50% {
-        background-color: #fff;
-    }
-    100% {
-        background-color: #000000;
-    }
-}
+    
