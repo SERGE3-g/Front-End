@@ -1,0 +1,10 @@
+Realizzare un esercizio simile a quello mostrato in precedenza (ovvero indovina il numero da 1 a 10)
+ma aggiungendo delle migliorie:
+
+Se il numero da indovinare e più alto o più basso da quello digitato dovrà essere stampato a video
+Se si scrive un numero non valido dovrà essere stampato a video un messaggio d'errore
+si vuole che una volta indovinato il numero, venga azzerato il gioco per ricominciare.
+
+Bonus: si potrebbe aggiungere un numero di tentativi effettuati per indovinare il numero.
+Bonus2x: si potrebbe anche realizzare una piccola classifica in base al numero di tentativi per indovinare il numero
+NB: il bonus2x non funziona se si lascia ricaricare la pagina al termine del gioco, bisogna trovare un'altra soluzione.

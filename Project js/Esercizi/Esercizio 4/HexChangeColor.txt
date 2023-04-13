@@ -1,0 +1,5 @@
+Ricreare l'esercizio hexColorChanger.
+
+Tieni presente che Hex è un numero esadecimale di 6 cifre, 24 bit che rappresenta il rosso, il verde e il blu. 
+Un esempio di rappresentazione cromatica esadecimale è #123456, 12 è rosso, 34 è verde e 56 è blu. Ci sono 16 milioni di colori possibili.
+Per l'esadecimale si usano in genere simboli da 0 a 9 per le prime dieci cifre, e poi le lettere da A a F per le successive sei cifre, per un totale di 16 simboli.

@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+  }
+  h1 {
+    text-align: center;
+    color: white;
+  }
+  .container {
+    width: 500px;
+    height: 500px;
+    background-color: red;
+    margin: 0 auto;
+    position: relative;
+  }
+  .box1 {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    position: absolute;
+    top: 50px;
+    left: -50px;
+  }
+  .box2 {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: absolute;
+    top: -2px;
+    right: 0px;
+  }
+  .box3 {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    position: absolute;
+    bottom: 0px;
+    left: -30px;
+    right: 5px;
+  }
+  .box1,
+  .box2,
+  .box3 {
+    text-align: center;
+    line-height: 200px;
+    font-size: 100px;
+    color: white;
+  }
+  .box2 {
+    color: yellow;
+  }
+  .box3 {
+    color: black;
+  }

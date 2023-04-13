@@ -1,0 +1,11 @@
+@keyframes animated-squares {
+    0% {
+        background-color: #10851a;
+    }
+    50% {
+        background-color: #fff;
+    }
+    100% {
+        background-color: #000000;
+    }
+}

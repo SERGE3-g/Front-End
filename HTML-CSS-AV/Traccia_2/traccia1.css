@@ -1,0 +1,24 @@
+body {
+    background-color: #3f7c3f;
+}
+h1 {
+    text-align: center;
+    color: white;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3f7c3f;
+    text-align: center;
+}
+li {
+    float: left;
+    margin-right: 30px;
+    text-align: center;
+}
+li:last-child {
+    float:0;
+    margin-right: 5px;
+}

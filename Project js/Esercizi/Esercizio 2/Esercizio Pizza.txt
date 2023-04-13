@@ -1,0 +1,7 @@
+Realizzare un esercizio simile alla dimostrazione contenuta nel file dom.js nella cartella dom di code.
+Bisognerà realizzare una piccola applicazione che simuli la scelta di ingredienti per una pizza.
+Il prezzo iniziale della pizza è 3€.
+Sarà quindi necessario permettere al cliente di scrivere all'interno di un input gli ingredienti, per poi aggiungerli come visto nella dimostrazione.
+Ogni ingrediente aggiuntivo dopo il secodo, aumenterà il prezzo della pizza di 1€.
+
+è gradito l'uso del css.

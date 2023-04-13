@@ -1,0 +1,31 @@
+.box {
+    width: 250px;
+    height: 250px;
+    background-color: black;
+    border-radius: 50%;
+    animation-name: mymove;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes mymove {
+    0% {
+    background-color: black;
+    border-radius: 50%;
+    }
+    25% {
+    background-color: yellow;
+    border-radius: 50%;
+    }
+    50% {
+    background-color: yellow;
+    border-radius: 0%;
+    }
+    75% {
+    background-color: green;
+    border-radius: 0%;
+    }
+    100% {
+    background-color: black;
+    border-radius: 50%;
+    }
+}

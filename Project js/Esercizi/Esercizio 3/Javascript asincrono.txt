@@ -1,0 +1,5 @@
+Realizzare una pagina web che presenti gli articoli di un blog. Utilizzare https://jsonplaceholder.typicode.com/posts come api
+per raccogliere tutti i post.
+Utilizzare da esempio il layout mostrato nel file layout.
+
+realizzare lo stesso esempio sia con una funzione in Ajax sia con una funzione con Fetch API
