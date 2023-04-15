@@ -1,0 +1,74 @@
+<!-- Scrivi un programma che restituisca in output la somma e la media di 5 numeri dati in input dall’utente.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traccia5</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: aquamarine;
+        }
+        h1 {
+            text-align: center;
+        }
+        div {
+            text-align: center;
+            border: 10px;
+            border-radius: 5px;
+        }
+        p {
+            font-size: 20px;
+            background-color: brown;
+            color: white;
+        }
+        button {
+            font-size: 20px;
+            background-color: rgb(63, 165, 42);
+            color: white;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+    <h1>Traccia 5</h1>
+    <div>
+        <p id="somma"></p>
+        <p id="media"></p>
+    </div>
+    <div>
+        <button onclick="sommaMedia()">Somma e media</button>
+    </div>
+    <script>
+        function sommaMedia() {
+            let somma = 0;
+            let media = 0;
+            for (let i = 0; i < 5; i++) {
+                let numero = parseInt(prompt("Inserisci un numero"));
+                somma += numero;
+            }
+            media = somma / 5;
+            document.getElementById("somma").innerHTML = "La somma dei numeri è " + somma;
+            document.getElementById("media").innerHTML = "La media dei numeri è " + media;
+        }
+
+ 
+    </script>
+   <!-- <script>
+        let somma = 0;
+        let media = 0;
+        for (let i = 0; i < 5; i++) {
+            let numero = parseInt(prompt("Inserisci un numero"));
+            somma += numero;
+        }
+        media = somma / 5;
+        alert("La somma dei numeri è " + somma + " e la media è " + media);
+    </script>*/-->
+</body>
+</html>

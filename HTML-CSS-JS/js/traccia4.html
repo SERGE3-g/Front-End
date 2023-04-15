@@ -1,0 +1,88 @@
+<!--Scrivere un programma JavaScript che ritorni il seguente output
+*sono necessari 2 cicli for annidati.
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+1 2 3 4 5 6
+1 2 3 4 5 6 7
+1 2 3 4 5 6 7 8
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traccia4</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: #9bb3a9;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            padding-top: 20px;
+        }
+        p {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            padding-top: 20px;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .col-12 {
+            width: 100%;
+        }
+        .btn {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            font-size: 20px;
+        }
+        .btn-primary {
+            background-color: #00ff88;
+            border-color: #007bff;
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background-color: #00ff88;
+        }
+    </style>
+    <h2>Stampa il seguente output</h2>
+    <p>Sei pronto per stampare il seguente output?.</p>
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-primary" onclick="myFunction()">Stampa</button>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var i, j;
+            for (let  i = 1; i <= 8; i++) {
+                document.write("<br>");
+                for ( let j = 1; j <= i; j++) {
+                    document.write(j);
+                 
+                }
+            }
+
+        }
+    </script>
+</html>

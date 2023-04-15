@@ -1,0 +1,62 @@
+<!--Scrivi un programma che dato l'anno corrente e un anno di nascita (acquisito in input) determini:
+    - l'età della persona,
+    - quanti anni sono necessari per raggiungere i 100
+  Restituisca in output (con alert) entrambi i risultati.
+(Suggerimento: documentarsi su come utilizzare new Date() e getFullYear() per acquisire l’anno corrente) 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traccia6</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: aquamarine;
+        }
+        h1 {
+            text-align: center;
+        }
+        div {
+            text-align: center;
+            border: 10px;
+            border-radius: 5px;
+        }
+        p {
+            font-size: 20px;
+            background-color: brown;
+            color: white;
+        }
+        button {
+            font-size: 20px;
+            background-color: rgb(42, 75, 165);
+            color: white;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+    <h1>Traccia 6</h1>
+    <div>
+        <p id="eta"></p>
+        <p id="anni"></p>
+    </div>
+    <div>
+        <button onclick="etaAnni()">Età e anni</button>
+    </div>
+    <script>
+        function etaAnni() {
+            let annoCorrente = new Date().getFullYear();
+            let annoNascita = parseInt(prompt("Inserisci l'anno di nascita"));
+            let eta = annoCorrente - annoNascita;
+            let anni = 100 - eta;
+            document.getElementById("eta").innerHTML = "L'età è " + eta;
+            document.getElementById("anni").innerHTML = "Mancano " + anni + " anni per arrivare a 100";
+        }
+    </script>
+</html>

@@ -1,0 +1,62 @@
+<!--Scrivi un programma che converta un voto numerico (dato in input dall’utente) in un giudizio seguendo questi parametri:
+    voto < 18: insufficiente
+    18 <= voto < 21: sufficiente
+    21 <= voto < 24: buono
+    24 <= voto < 27: distinto
+    27 <= voto <= 29: ottimo
+    voto = 30: eccellente
+  Utilizzare il costrutto iterativo If.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS</title>
+  </head>
+  <body>
+    <style>
+        body {
+            background-color: #0facb8;
+            font-family: sans-serif;
+            
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        div {
+            text-align: center;
+            border: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    <h1>JS</h1>
+    <div>
+        <p id="voto"></p>
+    </div>
+    <div>
+        <button onclick="voto()">Voto</button>
+    </div>
+    <script>
+      var voto = parseInt(prompt("Inserisci il voto"));
+      if (voto < 18) {
+        console.log("insufficiente");
+      } else if (voto >= 18 && voto < 21) {
+        console.log("sufficiente");
+      } else if (voto >= 21 && voto < 24) {
+        console.log("buono");
+      } else if (voto >= 24 && voto < 27) {
+        console.log("distinto");
+      } else if (voto >= 27 && voto <= 29) {
+        console.log("ottimo");
+      } else if (voto == 30) {
+        console.log("eccellente");
+      } else {
+        console.log("voto non valido");
+      }
+
+
+    </script>
+  </body>
+</html>

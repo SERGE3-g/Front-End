@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li>Home</li>
+          <li>Services</li>
+          <li>Products</li>
+          <li>Dove siamo</li>
+          <li>Chi siamo</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>FAQ</li>
+          <li>login</li>
+        </ul>
+      </nav>
+      <div class="carousel">
+        <div class="carousel__item">
+          <img src="https://picsum.photos/200/300" alt="Image 1" />
+        </div>
+        <div class="carousel__item">
+          <img src="https://picsum.photos/200/300" alt="Image 2" />
+        </div>
+        <div class="carousel__item">
+          <img src="https://picsum.photos/200/300" alt="Image 3" />
+        </div>
+        <div class="carousel__item">
+          <img src="https://picsum.photos/200/300" alt="Image 4" />
+        </div>
+        <div class="carousel__item">
+          <img src="https://picsum.photos/200/300" alt="Image 5" />
+        </div>
+        <div class="carousel__item">
+          <img src="https://picsum.photos/200/300" alt="Image 6" />
+        </div>
+        <div class="carousel__item">
+          <img src="https://picsum.photos/200/300" alt="Image 7" />
+        </div>
+        <div class="carousel__item">
+          <img src="https://picsum.photos/200/300" alt="Image 8" />
+        </div>
+        <div class="carousel__item">
+          <img src="https://picsum.photos/200/300" alt="Image 9" />
+        </div>
+        <div class="carousel__item">
+          <img src="https://picsum.photos/200/300" alt="Image 10" />
+        </div>
+        <div class="carousel__item">
+          <img src="https://picsum.photos/200/300" alt="Image 11" />
+        </div>
+        <div class="carousel__item">
+          <img src="https://picsum.photos/200/300" alt="Image 12" />
+        </div>
+        <div class="carousel__item">
+          <img src="https://picsum.photos/200/300" alt="Image 13" />
+        </div>
+        <div class="carousel__item">
+          <img src="https://picsum.photos/200/300" alt="Image 14" />
+        </div>
+        <div class="carousel__item">
+          <img src="https://picsum.photos/200/300 " alt="Image 15" />
+        </div>
+      </div>
+      <card_travel>
+        <h1>Viaggi</h1>
+        <p>Viaggiare è la cosa più bella che ci sia.</p>
+        <div>
+          <div class=messaggio>
+            <p>Sei pronto per il tuo viaggio?</p>
+             <div>
+              <button>Si</button>
+              <button>No</button>
+             </div>
+        </div>
+    <form action="index.html" method="post">
+        <fieldset>
+            <legend>Informazioni personali</legend>
+        <label for="cognome">Cognome</label>
+        <input type="text" name="cognome" id="cognome" maxlength="40" required>
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" maxlength="30" required>
+        <label for="matricola">Matricola</label>
+        <input type="text" name="matricola" id="matricola" maxlength="12" required>
+        <label for="regione">Regione</label>
+        
+        <select name="regione" id="regione" required>
+            <option value="Lazio">Lazio</option>
+            <option value="Lombardia">Lombardia</option>
+            <option value="Piemonte">Piemonte</option>
+            <option value="Sicilia">Sicilia</option>
+            <option value="Veneto">Veneto</option>
+            
+        </select>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" maxlength="30">
+        <label for="telefono">Telefono</label>
+        <input type="text" name="telefono" id="telefono" maxlength="15">
+        <label for="richieste">Richieste</label>
+        <textarea name="richieste" id="richieste" cols="60" rows="12"></textarea>
+        <input type="submit" value="Invia">
+        <input type="reset" value="Reset">
+        </fieldset>
+    </form>
+    <script src="form.js"></script>
+</html>

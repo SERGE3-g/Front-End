@@ -9,7 +9,118 @@
 </head>
 
 <body>
-
+    <style>
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .button {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: 0.5s;
+            letter-spacing: 4px;
+            font-size: 20px;
+        }
+    
+        .button span {
+            position: absolute;
+            display: block;
+        }
+    
+        .button span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background-color: #e74c3c;
+            animation: animate1 1s linear infinite;
+        }
+    
+        @keyframes animate1 {
+            0% {
+                left: -100%;
+            }
+    
+            50%,
+            100% {
+                left: 100%;
+            }
+        }
+    
+        .button span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #e67e22;
+            animation: animate2 1s linear infinite;
+            animation-delay: 0.25s;
+        }
+    
+        @keyframes animate2 {
+            0% {
+                top: -100%;
+            }
+    
+            50%,
+            100% {
+                top: 100%;
+            }
+        }
+    
+        .button span:nth-child(3) {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background-color: #f1c40f;
+            animation: animate3 1s linear infinite;
+            animation-delay: 0.5s;
+        }
+    
+        @keyframes animate3 {
+            0% {
+                right: -100%;
+            }
+    
+            50%,
+            100% {
+                right: 100%;
+            }
+        }
+    
+        .button span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #2ecc71;
+            animation: animate4 1s linear infinite;
+            animation-delay: 0.75s;
+        }
+    </style>
+    <h1>Creazione di oggetti</h1>
+    
+    <div class="container">
+        <a href="#" class="button">
+            <span>serge</span>
+            <span>Guea</span>
+            <span></span>
+            <span></span>
+            Click me
+        </a>
+    </div>
+    <BUtton onclick="alert('Ciao mondo')"> Click me</BUtton>
     <script src="oggetti.js"></script>
 </body>
 

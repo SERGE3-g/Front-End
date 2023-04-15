@@ -1,0 +1,73 @@
+<!--Scrivi un programma che dati quattro numeri in input,
+  restituisca in output il maggiore e il minore.
+  Esempio:
+    Input: a = 3, b = -1, c = 4, d = -2
+    Output: maggiore = 4, minore = -2
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traccia7</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: aquamarine;
+        }
+        h1 {
+            text-align: center;
+        }
+        div {
+            text-align: center;
+            border: 10px;
+            border-radius: 5px;
+        }
+        p {
+            font-size: 20px;
+            background-color: brown;
+            color: white;
+        }
+        button {
+            font-size: 20px;
+            background-color: rgb(165, 112, 42);
+            color: white;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+    <h1>Traccia 7</h1>
+    <div>
+        <p id="maggiore"></p>
+        <p id="minore"></p>
+    </div>
+    <div>
+        <button onclick="maggioreMinore()">Maggiore e minore</button>
+    </div>
+    <script>
+        function maggioreMinore() {
+            let maggiore = 0;
+            let minore = 0;
+            for (let i = 0; i < 4; i++) {
+                let numero = parseInt(prompt("Inserisci un numero"));
+                if (numero > maggiore) {
+                    maggiore = numero;
+                }
+                if (numero < minore) {
+                    minore = numero;
+                }
+                if (minore == 0) {
+                    minore = numero;
+                }
+
+            }
+            document.getElementById("maggiore").innerHTML = "Il numero maggiore è " + maggiore;
+            document.getElementById("minore").innerHTML = "Il numero minore è " + minore;
+            
+        }
+    </script>
+</html>

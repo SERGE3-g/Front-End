@@ -1,0 +1,87 @@
+<!--Scrivere un programma JavaScript che stampi i primi 8 numeri della serie di Fibonacci utilizzando il ciclo While.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traccia5</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: #9bb3a9;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            padding-top: 20px;
+        }
+        p {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            padding-top: 20px;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .col-12 {
+            width: 100%;
+        }
+        .btn {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            font-size: 20px;
+        }
+        .btn-primary {
+            background-color: #cc0b15;
+            border-color: #007bff;
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background-color: #e01122;
+        }
+    </style>
+     <h1>Fibonacci</h1>
+    <p>Welcom to my Home page Fibonacci </p>
+    <p>Sei pronto per stampare i primi 8 numeri?.</p>
+    <p>Clicca qui sotto per comminciare grazie</p>
+    <div id="output"></div>
+    <div class="row">
+        <div class="col-12">
+            <button id="btn" class="btn btn-primary">Clicca qui</button>
+        </div>
+    </div>
+    <script>
+        var btn = document.getElementById("btn");
+        btn.addEventListener("click", fibonacci);
+        function fibonacci() {
+            var a = 0;
+            var b = 1;
+            var c = 0;
+            var i = 0;
+            while (i < 8) {
+                c = a + b;
+                a = b;
+                b = c;
+                console.log(c);
+                i++;
+            }
+        }
+    </script>
+        
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!-- Scrivi un programma che esegua le quattro operazioni fondamentali e visualizzi il risultato al click di un bottone. Impostare per gli operandi dei valori costanti.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Operazioni</title>
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: aquamarine;
+      }
+      h1 {
+        text-align: center;
+      }
+      div {
+        text-align: center;
+      }
+      p {
+        font-size: 20px;
+        background-color: brown;
+        color: white;
+      }
+        button {
+            font-size: 20px;
+            background-color: brown;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+    </style>
+    <h1>Operazioni</h1>
+    <div>
+        <p id="operazioni"></p>
+    </div>
+    <div>
+        <p id="somma"></p>
+    <button onclick="operazioni()">Operazioni</button>
+   </div>
+    <script>
+
+      let a = 12;
+      let b = 10;
+      let somma = a + b;
+      let sottrazione = a - b;
+      let moltiplicazione = a * b;
+      let divisione = a / b;
+      //document.write("Somma: " + somma + "<br>");
+      //document.write("Sottrazione: " + sottrazione + "<br>");
+      //document.write("Moltiplicazione: " + moltiplicazione + "<br>");
+      //document.write("Divisione: " + divisione + "<br>");
+      //document.write("<br>");
+        //document.getElementById("somma").innerHTML = somma;
+        function operazioni() {
+            document.getElementById("operazioni").innerHTML = "Somma: " + somma + "<br>" + "Sottrazione: " + sottrazione + "<br>" + "Moltiplicazione: " + moltiplicazione + "<br>" + "Divisione: " + divisione + "<br>";
+            }
+
+    </script>
+  </body>

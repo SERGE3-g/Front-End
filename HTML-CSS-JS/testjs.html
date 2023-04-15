@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        
+        
+    </style>
+    <h1>Test JS</h1>
+    <p id="ciao">Test JS</p>
+    <p id="cars">Test JS</p>
+    <h1> stampo un elemento di un array</h1>
+    <h2>ciclo for in</h2>
+
+    <script>
+        var x = 5;
+        var y = 6;
+        var z = x + y;
+        document.write(z); // 11 
+        document.write("<br>");
+        document.write(x + y); // 11
+        document.write("<br>");
+        document.getElementById("ciao").innerHTML = z;
+         do
+        {
+            document.write("The number is " + x);
+            document.write("<br>");
+            x ++; 
+        } while (x < 10); 
+
+        var cars = ["Saab", "Volvo", "BMW"];
+        var i = 0;
+        var text = "";
+        for (;cars[i];) {
+            text += cars[i] + "<p>";
+            i++;
+        }
+        document.write(text);
+        document.getElementById("cars").innerHTML = text;
+
+        for (i = 0; i < cars.length; i++) {
+            text += cars[i] + "<p>";
+        }
+        document.write(text);
+        document.getElementById("cars").innerHTML = text;
+        
+        // test FOR tradizionale
+        document.write("<h1>for tradizionale</h1>");
+        let citta = ["Roma", "Milano", "Napoli", "Torino", "Palermo"];
+        for (let i = 0; i < citta.length; i++) {
+            document.write(citta[i]);
+            document.write("<p>");
+        }
+        // test FOR IN 
+        document.write("<h1>for in</h1>");
+        for (let i in citta) {
+            document.write("<p>" + citta[i] + "</p>");
+        }
+        // test for of 
+        document.write("<h2>for of</h2>");
+        for (let singolaCitta of citta) {
+            document.write("<p>" + singolaCitta + "</p>");
+        }
+        // test forEach
+        document.write("<h2>forEach</h2>");
+        
+    </script>
+</body>
+</html>

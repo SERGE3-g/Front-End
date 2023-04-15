@@ -1,0 +1,96 @@
+<!---Scrivere un programma JavaScript che, dato un numero in input dall’utente,  stampi:
+“è un numero primo” se il numero dato dall’utente è un numero primo
+“non è un numero primo” se il numero dato dall’utente non è un numero primo
+“numero negativo” se il numero dato dall’utente è negativo
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traccia6</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: #9bb3a9;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            padding-top: 20px;
+        }
+        p {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            padding-top: 20px;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .col-12 {
+            width: 100%;
+        }
+        .btn {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            font-size: 20px;
+        }
+        .btn-primary {
+            background-color: #00ff88;
+            border-color: #007bff;
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background-color: #00ff88;
+            border-color: #007bff;
+            color: #fff;
+        }
+
+    </style>
+    <h2>Ciao e Benvenuti nella nostra pagina js</h2> 
+    <p>Clicca qui sotto per comminciare grazie</p>
+    <div id="output"></div>
+    <div class="row">
+        <div class="col-12">
+            <button id="btn" class="btn btn-primary">Clicca qui</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            var numero = prompt("Inserisci un numero");
+            var primo = true;
+            if (numero < 0) {
+                alert("numero negativo");
+            } else {
+                for (var i = 2; i < numero; i++) {
+                    if (numero % i == 0) {
+                        primo = false;
+                    }
+                }
+                if (primo) {
+                    alert("è un numero primo");
+                } else {
+                    alert("non è un numero primo");
+                }
+            }
+        });
+    </script>
+</body>
+</html>

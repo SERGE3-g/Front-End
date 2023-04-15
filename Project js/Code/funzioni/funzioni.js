@@ -4,14 +4,13 @@
 //nomeFunzione();
 
 function nomeFunzione() {
-    //corpo funzione
-    console.log("invocazione nomeFunzione()");
+  //corpo funzione
+  console.log("invocazione nomeFunzione()");
 }
 
 //a runtime succede questo -> const nomeFunzione = nomeFunzione;
 
 nomeFunzione();
-
 
 //function expression
 
@@ -19,8 +18,8 @@ nomeFunzione();
 //somma(10, 20); --> error
 
 const somma = function (a, b) {
-    return a + b;
-}
+  return a + b;
+};
 
 const somma2 = (a, b) => a + b;
 
@@ -38,23 +37,20 @@ console.log(risultato2(1, 1));
 //stesso indirizzo in memoria
 console.log(risultato2 == somma);
 
-
 //factory function
 //una factory function è una funzione che restituisce una funzione.
 
-
 const operazioneMatematica = (tipoOperazione) => {
-    if (tipoOperazione == "somma") {
-        return function (a, b) {
-            return a + b;
-        }
-    } else if (tipoOperazione == "sottrazione") {
-        return function (a, b) {
-            return a - b;
-        }
-    }
-}
-
+  if (tipoOperazione == "somma") {
+    return function (a, b) {
+      return a + b;
+    };
+  } else if (tipoOperazione == "sottrazione") {
+    return function (a, b) {
+      return a - b;
+    };
+  }
+};
 
 let operazione = operazioneMatematica("sottrazione");
 
@@ -64,17 +60,20 @@ operazione = operazioneMatematica("somma");
 
 console.log(operazione(20, 11));
 
-
 // funzioni anonime con esempio di map();
 
-const prodotti = [{ nome: "carta", venduto: true }, { nome: "penna", venduto: false }, { nome: "gomma", venduto: true }];
+const prodotti = [
+  { nome: "carta", venduto: true },
+  { nome: "penna", venduto: false },
+  { nome: "gomma", venduto: true },
+];
 
 const prodottiAggiornata = prodotti.map((elemento) => {
-    if (elemento.venduto) {
-        return { nome: elemento.nome + " - venduto", venduto: elemento.venduto }
-    } else {
-        return elemento;
-    }
-})
+  if (elemento.venduto) {
+    return { nome: elemento.nome + " - venduto", venduto: elemento.venduto };
+  } else {
+    return elemento;
+  }
+});
 
 console.log(prodottiAggiornata);

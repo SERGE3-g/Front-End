@@ -1,0 +1,50 @@
+<!--Visualizzare nella finestra del browser, il quadrato dei primi 15 numeri interi e la scritta “fine elaborazione “ al termine.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traccia</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: aquamarine;
+        }
+        h1 {
+            text-align: center;
+        }
+        div {
+            text-align: center;
+        }
+        p {
+            font-size: 20px;
+            background-color: brown;
+            color: white;
+        }
+        button {
+            font-size: 20px;
+            background-color: brown;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+    <h1>Traccia</h1>
+    <div>
+        <p id="operazioni"></p>
+    </div>
+    <script>
+        for (let i = 1; i <= 15; i++) {
+            document.write(i * i + "<br>");
+        }
+        document.write("Fine elaborazione");
+    </script>
+    
+</body>
+</html>

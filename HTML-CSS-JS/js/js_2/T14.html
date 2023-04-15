@@ -1,0 +1,54 @@
+<!--Scrivi un programma con due funzioni, 
+la prima prende in ingresso un intero e verifica se sia compreso nel range da 1 a 7.  Se è compreso, la funzione restituirà TRUE, se non è compreso restituirà FALSE.
+La seconda funzione:
+nel caso la prima restituisca TRUE visualizza il giorno della settimana corrispondente,
+  - considerare la seguente corrispondenza:
+        1 = lunedì
+        ...
+        7 = domenica
+
+  - nel caso il giorno non sia compreso nel range, la funzione dovrà restituire un messaggio d'errore come questo: " Valore non valido."
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Giorno della settimana</title>
+  </head>
+  <body>
+      <style>
+        body {
+          font-family: sans-serif;
+          background-color: aquamarine;
+        }
+        h1 {
+          text-align: center;
+        }
+      </style>
+    <h1>Giorno della settimana</h1>
+
+    <script>
+      document.write("Inserisci un numero da 1 a 7");
+      let giorno = parseInt(prompt("Inserisci un numero da 1 a 7"));
+      let giorni = ["lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica"];
+
+      function verifica(giorno) {
+        if (giorno >= 1 && giorno <= 7) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      function giornoSettimana(giorno) {
+        if (verifica(giorno)) {
+          return giorni[giorno - 1];
+        } else {
+          return "Valore non valido";
+        }
+      }
+
+      document.write("<br>" + giornoSettimana(giorno));
+  
+    </script>
+  </body>
