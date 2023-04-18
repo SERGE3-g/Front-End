@@ -1,0 +1,18 @@
+table{
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid blue;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+  color: red;
+  background: green
+  ;
+}
+
+td{
+  background: silver;
+  color: brown;
+}

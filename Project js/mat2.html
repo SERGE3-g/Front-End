@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form class="form-inline" action="/action_page.php">
+        <label for="email" class="mr-sm-2">Email address:</label>
+        <input type="email" class="form-control mb-2 mr-sm-2" placeholder="Enter email" id="email">
+        <label for="pwd" class="mr-sm-2">Password:</label>
+        <input type="password" class="form-control mb-2 mr-sm-2" placeholder="Enter password" id="pwd">
+        <div class="form-check mb-2 mr-sm-2">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox"> Remember me
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+      </form>
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img class="mySlides" src="aud.jpeg" style="width: 800px;">
+            <img class="mySlides" src="images.jpeg" style="width: 800px;">
+            <img class="mySlides" src="img.jpeg" style="width: 800px;">
+            <img class="mySlides" src="images2.png" style="width:800px">
+        </div>
+    <section>
+        <h1>Form</h1>
+        <p>Enter your name and email, then click the Submit button to register.</p>
+    </section>
+        <form action="">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <input type="submit" value="Submit">
+        </form>
+        
+    <script>
+        const set = new Set([serge, john, paul, ringo, george]);
+console.log(set.size); // 5
+console.log(set.has(serge)); // true
+console.log(set.has(john)); // true
+console.log(set.has(paul)); // true
+console.log(set.has(ringo)); // true
+console.log(set.has(george)); // true
+console.log(set.has('serge')); // false
+console.log(set.has('john')); // false
+
+for (const member of set) {
+  console.log(member);
+}
+// function increment è una funzione che prende un numero e lo incrementa di incrementBy
+let increment = function(incrementBy) {
+  return function(number) {
+    return number + incrementBy;
+  };
+}
+// incrementByTwo è una funzione che prende un numero e lo incrementa di 2
+let incrementByTwo = increment(2);
+console.log(incrementByTwo(1)); // 3
+console.log(incrementByTwo(2)); // 4
+console.log(incrementByTwo(3)); // 5
+console.log(incrementByTwo(4)); // 6
+
+//creo l'oggetto 
+let audi = {
+    model: 'A3',
+    color: 'red',
+    year: 2018,
+    km: 0,
+}
+let bmw = {
+    model: 'X5',
+    color: 'black',
+    year: 2019,
+    km: 0,
+}
+let panda = {
+    model: '500',
+    color: 'white',
+    year: 2017,
+    km: 0,
+}
+
+const cars = [audi, bmw, panda];
+console.log(cars);
+
+
+    //creo un metodo per l'oggetto
+    audi.drive = function(km) {
+        this.km += km;
+    }
+    audi.drive(100);
+    console.log(audi.km);
+
+    //creo un metodo per l'oggetto
+    bmw.drive = function(km) {
+        this.km += km;
+    }
+    bmw.drive(200);
+    console.log(bmw.km);
+
+    //creo un metodo per l'oggetto
+    panda.drive = function(km) {
+        this.km += km;
+    }
+    panda.drive(300);
+    console.log(panda.km);
+
+   // creo oggetto user con proprietà name e surname
+    let user = {
+        name: 'Serge',
+        surname: 'Bouvier',
+    }
+    // creo oggetto admin con proprietà name e surname
+    let admin = {
+        name: 'John',
+        surname: 'Lennon',
+    }
+
+    //arrow function  
+    let sum = (a, b) => a + b;
+    console.log(sum(1, 2)); // 3
+
+    //arrow function classica
+    let  = function(a, b) {
+        return a + b;
+    }
+    console.log(sum(1, 2)); // 3
+
+    //arrow function con un solo parametro
+    let eta = prompt('Quanti anni hai?');
+    let message = (eta < 18) ? // if
+        () => alert('Sei minorenne') : //esle
+        () => alert('Sei maggiorenne');
+    message();
+
+
+    // Function callback
+    function ask(question, yes, no) {
+        if (confirm(question)) yes()
+        else no();
+    }
+    setTimeout(() => {
+        ask(
+            "Accetti?",
+            () => alert("Accettato."),
+            () => alert("Rifiutato.")
+        );
+    }
+    , 1000);
+
+    // ajax
+    /*let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
+    xhr.send();
+    xhr.onload = function() {
+        if (xhr.status != 200) {
+            console.log(`Error ${xhr.status}: ${xhr.statusText}`);
+        } else {
+            let users = JSON.parse(xhr.response);
+            console.log(users);
+        }
+    };
+    xhr.onerror = function() {
+        console.log("Request failed");
+    };
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    let xhr = new XMLHttpRequest();*/
+ function displayUsers(users) {
+        let html = '';
+        for (let user of users) {
+            html += `<div class="user">
+                <h2>${user.name}</h2>
+                <p>${user.email}</p>
+                <p>${user.phone}</p>
+            </div>`;
+        }
+        document.querySelector('.users').innerHTML = html;
+    }
+
+    function displayFullNames(users) {
+        let html = '';
+        for (let user of users) {
+            html += `<div class="user">
+                <h2>${user.name}</h2>
+                <p>${user.email}</p>
+                <p>${user.phone}</p>
+            </div>`;
+        }
+        document.querySelector('.users').innerHTML = html;
+    }
+
+    </script>
+</body>
+</html>

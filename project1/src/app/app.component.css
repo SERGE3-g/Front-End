@@ -1,0 +1,28 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: aquamarine;
+}
+  .active {
+      color: red;
+  }
+  div {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      display: flex;
+
+  }
+  nav {
+      display: flex;
+      justify-content: space-between;
+      width: 30%;
+      display: flex;
+  }
+  a {
+      text-decoration: none;
+      color: rgb(42, 139, 163);
+      margin: 0 10px;
+      text-align: center;
+      font-size: 1.2rem;
+
+  }

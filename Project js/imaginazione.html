@@ -1,0 +1,258 @@
+<!--Crea layout per brochure, documenti multipagina e altro ancora. 
+Usa righelli, griglie e linee guida per aiutarti a organizzare gli oggetti e posizionarli esattamente dove vuoi.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   .page {
+        width: 8.5in;
+        height: 11in;
+        margin: 0.5in;
+        padding: 0.5in;
+        border: 1px solid #ccc;
+        background: #fff;
+        box-shadow: 0 0 0.5in rgba(0,0,0,0.5);
+        float: left;
+    }
+    .page:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .page:nth-child(odd) {
+        background: #eee;
+    }
+    .page:nth-child(even) {
+        background: #fff;
+    }
+    .page:nth-child(2n+1) {
+        background: #eee;
+    }
+    .page:nth-child(2n) {
+        background: #fff;
+    }
+    .page:nth-child(2n+1):after {
+        content: "odd";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #f00;
+        color: #fff;
+        padding: 0.1in;
+    }
+    .page:nth-child(2n):after {
+        content: "even";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #f00;
+        color: #fff;
+        padding: 0.1in;
+    }
+    .page:nth-child(2n+1):before {
+        content: "odd";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: #f00;
+        color: #fff;
+        padding: 0.1in;
+    }
+    .page:nth-child(2n):before {
+        content: "even";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: #f00;
+        color: #fff;
+        padding: 0.1in;
+    }
+    .page:nth-child(2n+1):first-child {
+        background: #fff;
+    }
+    .page:nth-child(2n):first-child {
+        background: #eee;
+    }
+    .page:nth-child(2n+1):last-child {
+        background: #eee;
+    }
+    .page:nth-child(2n):last-child {
+        background: #fff;
+    }
+    .page:nth-child(2n+1):first-child:after {
+        content: "first odd";
+    }
+    .page:nth-child(2n):first-child:after {
+        content: "first even";
+    }
+    .page:nth-child(2n+1):last-child:after {
+        content: "last odd";
+    }
+    .page:nth-child(2n):last-child:after {
+        content: "last even";
+    }
+    .page:nth-child(2n+1):first-child:before {
+        content: "first odd";
+    }
+    .page:nth-child(2n):first-child:before {
+        content: "first even";
+    }
+    .page:nth-child(2n+1):last-child:before {
+        content: "last odd";
+    }
+    .page:nth-child(2n):last-child:before {
+        content: "last even";
+    }
+    .page:nth-child(2n+1):first-child:nth-last-child(2) {
+        background: #fff;
+    }
+    .page:nth-child(2n):first-child:nth-last-child(2) {
+        background: #eee;
+    }
+    .page:nth-child(2n+1):first-child:nth-last-child(2):after {
+        content: "first odd, second to last";
+    }
+    .page:nth-child(2n):first-child:nth-last-child(2):after {
+        content: "first even, second to last";
+    }
+    .page:nth-child(2n+1):first-child:nth-last-child(2):before {
+        content: "first odd, second to last";
+    }
+    .page:nth-child(2n):first-child:nth-last-child(2):before {
+        content: "first even, second to last";
+    }
+    .page:nth-child(2n+1):first-child:nth-last-child(2):nth-last-child(2) {
+        background: #eee;
+    }
+    .page:nth-child(2n):first-child:nth-last-child(2):nth-last-child(2) {
+        background: #fff;
+    }
+    .page:nth-child(2n+1):first-child:nth-last-child(2):nth-last-child(2):after {
+        content: "first odd, second to last, second";
+    }
+    .page:nth-child(2n):first-child:nth-last-child(2):nth-last-child(2):after {
+        content: "first even, second to last, second";
+    }
+    .page:nth-child(2n+1):first-child:nth-last-child(2):nth-last-child(2):before {
+        content: "first odd, second to last, second";
+    }
+    .page:nth-child(2n):first-child:nth-last-child(2):nth-last-child(2):before {
+        content: "first even, second to last, second";
+    }
+    .page:nth-child(2n+1):first-child:nth-last-child(2):nth-last-child(2):nth-last-child(2) {
+        background: #fff;
+    }
+    .page:nth-child(2n):first-child:nth-last-child(2):nth-last-child(2):nth-last-child(2) {
+        background: #eee;
+    }
+    .page:nth-child(2n+1):first-child:nth-last-child(2):nth-last-child(2):nth-last-child(2):after {
+        content: "first odd, second to last, second, third";
+    }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Sed
+            tincidunt, nisl eget ultricies lacinia, nisl ni metus, nisl eget <br>
+            ultricies lacinia, nisl ni metus, nisl eget ultricies lacinia, nisl <br>
+            ni metus, nisl eget ultricies lacinia, nisl ni metus, nisl eget <br>
+            ultricies lacinia, nisl ni metus, nisl eget ultricies lacinia, nisl <br>
+            ni metus, nisl eget ultricies lacinia, nisl ni metus, nisl eget <br>
+            ultricies lacinia, nisl ni metus, nisl eget ultricies lacinia, nisl <br>
+            ni metus, nisl eget ultricies lacinia, nisl ni metus, nisl eget <br>
+            ultricies lacinia, nisl ni metus, nisl eget ultricies lacinia, nisl <br>
+            ni metus, nisl eget ultricies lacinia, nisl ni metus, nisl eget <br>
+            ultricies lacinia, nisl ni metus, nisl eget ultricies lacinia, nisl <br>
+            ni metus, nisl eget ultricies lacinia, nisl ni metus, nisl eget <br>
+            ultricies lacinia, nisl ni metus, nisl eget ultricies lacinia, nisl <br>
+            ni metus, nisl eget ultricies lacinia, nisl ni metus, nisl eget <br>
+        </p>
+<!--main {
+            margin: 0 auto; width: 640px;
+        }
+        main div {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            float: right;
+            margin: 5px;
+            padding: 5px;
+            border: 5px solid black;
+            box-sizing: border-box;
+
+        }
+        main div:nth-child(2n) {
+            background-color: blue;
+        }
+        main div:nth-child(3n) {
+            background-color: green;
+        }
+        main div:nth-child(4n) {
+            background-color: yellow;
+        }-->
+    </div>
+
+    <div class="page">2</div>
+    <div class="page">3</div>
+    <div class="page">4</div>
+    <div class="page">5</div>
+    <div class="page">6</div>
+    <div class="page">7</div>
+    <div class="page">8</div>
+    <div class="page">9</div>
+    <div class="page">10</div>
+    <div class="page">11</div>
+    <div class="page">12</div>
+    <div class="page">13</div>
+    <div class="page">14</div>
+    <div class="page">15</div>
+    <div class="page">16</div>
+    <div class="page">17</div>
+    <div class="page">18</div>
+    <div class="page">19</div>
+    <div class="page">20</div>
+    <div class="page">21</div>
+    <div class="page">22</div>
+    <div class="page">23</div>
+    <div class="page">24</div>
+    <div class="page">25</div>
+    <div class="page">26</div>
+    <div class="page">27</div>
+    <div class="page">28</div>
+    <div class="page">29</div>
+    <div class="page">30</div>
+    <div class="page">31</div>
+    <div class="page">32</div>
+    <div class="page">33</div>
+    <div class="page">34</div>
+    <div class="page">35</div>
+    <div class="page">36</div>
+    <div class="page">37</div>
+    <div class="page">38</div>
+    <div class="page">39</div>
+    <div class="page">40</div>
+    <div class="page">41</div>
+    <div class="page">42</div>
+    <div class="page">43</div>
+    <div class="page">44</div>
+    <div class="page">45</div>
+    <div class ="page">46</div>
+    <div class="page">47</div>
+    <div class="page">48</div>
+    <div class="page">49</div>
+    <div class="page">50</div>
+
+    <section>
+        <article>
+            <p>1</p>
+        </article>
+    </section>
+</body>
+</html>
+

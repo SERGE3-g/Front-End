@@ -111,11 +111,11 @@ class Seconda extends NomeClasse {
     }
 }
 
-const obj = new NomeClasse("Renato", "Pipitò");
+const obj = new NomeClasse("Guea", "serge");
 
 obj.nomeFunzione();
 
-const secondo = new Seconda("Pippo", "Baudo", 86);
+const secondo = new Seconda("serge", "Bah", 86);
 
 secondo.nomeFunzione();
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(23, 107, 107);
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img class="mySlides" src="aud.jpeg" style="width: 800px;">
+            <img class="mySlides" src="images.jpeg" style="width: 800px;">
+            <img class="mySlides" src="img.jpeg" style="width: 800px;">
+            <img class="mySlides" src="images2.png" style="width:800px">
+        </div>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+</html>

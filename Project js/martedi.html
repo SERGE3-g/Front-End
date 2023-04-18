@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            width: 500px;
+            margin: 0 auto;
+        }
+        .carousel-slide {
+            width: 2000px;
+            transition: transform 0.5s;
+        }
+        .carousel-slide img {
+            width: 500px;
+            height: auto;
+            float : left;
+            float: right;
+        }   
+        .carousel-prev, .carousel-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            background-color:#fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            outline: none;
+        } 
+        .carousel-prev {
+            left: 10px;
+        }
+        .carousel-next {
+            right: 10px;
+        }
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        } 
+
+    </style>
+</head>
+<body>
+     <div class="carousel-container">
+      <div class="carousel-slide">
+       <img src="aud.jpeg" alt="audi">
+       <img src="images.jpeg" alt="images">
+      <img src="img.jpeg" alt="img"> 
+      <img src="images2.png" alt="images2">
+      </div>
+      <button class="carousel-prev">Prev</button>
+      <button class="carousel-next">Next</button>
+    </div>
+    
+    
+    <script>
+        const carouselSlide = document.querySelector('.carousel-slide');
+        const carouselImages = document.querySelectorAll('.carousel-slide img');
+        //Buttons
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+        //Counter
+        let counter = 1;
+        const size = carouselImages[0].clientWidth;
+
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        //Button Listeners
+        nextBtn.addEventListener('click', () => {
+            if (counter >= carouselImages.length - 1) return;
+            carouselSlide.style.transition = "transform 0.4s ease-in-out";
+            counter++;
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        });
+        prevBtn.addEventListener('click', () => {
+            if (counter <= 0) return;
+            carouselSlide.style.transition = "transform 0.4s ease-in-out";
+            counter--;
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        });
+        
+    </script>
+
+
+</body>
+</html>

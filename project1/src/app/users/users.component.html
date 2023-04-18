@@ -1,0 +1,24 @@
+<table>
+  <caption>{{title}}</caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cognome</th>
+      <th>Codicefiscale</th>
+      <th>province</th>
+      <th>city</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Age</th>
+      <th>Actions</th>
+      <th>modifica</th>
+      <th>Aggiungi</th>
+    </tr>
+  </thead>
+    <tr app-user
+      *ngFor="let user of users"[user-data]="user"
+      (onCancellaUser)="OncancellaUser($event)"
+      (onModificaUser)="OnmodificaUser($event)"
+      (onAggiungiUser)="OnaggiungiUser($event)">
+    </tr>
+</table>
