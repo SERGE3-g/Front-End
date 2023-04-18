@@ -23,5 +23,6 @@
         "testo",
         "Virgilio"
     ],
-    "livePreview.defaultPreviewPath": "/Exo/Traccia_1-11.html"
+    "livePreview.defaultPreviewPath": "/Exo/Traccia_1-11.html",
+    "C_Cpp.errorSquiggles": "disabled"
 }
