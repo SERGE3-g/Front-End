@@ -10,19 +10,132 @@
             font-family: Arial, Helvetica, sans-serif;
             background-color: rgb(23, 107, 107);
         }
-    </style>
+        .carousel-container {
+            position: relative;
+            width: 2000px;
+            height: auto;
+            margin: auto;
+            overflow: hidden;
+            background-color: rgb(23, 107, 107);
+
+        }
+        .carousel-slide {
+            position: relative;
+            width: 800px;
+            height: auto;
+            margin: auto;
+            overflow: hidden;
+
+        }
+        .mySlides {
+            display: none;
+            width: 800px;
+            height: auto;
+        }
+        .progress {
+            height: 20px;
+            width: 200px;
+            background-color: #ddd;
+            border-radius: 50px;
+            margin: 8px 0;
+        }
+        .progress-bar {
+            height: 100%;
+            border-radius: 50px;
+            transition: width 2s ease-in-out;
+
+        }
+        .progress-bar.bg-warning {
+            background-color: #ffc107;
+        }
+        .progress-bar.bg-danger {
+            background-color: #dc3545;
+        } 
+        
+        .mySlides {
+            animation: slide 2s linear infinite;
+        }
+        .mySlides:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .mySlides:nth-child(2) {
+            animation-delay: 2s;
+        }
+        .mySlides:nth-child(3) {
+            animation-delay: 4s;
+        }
+        .mySlides:nth-child(4) {
+            animation-delay: 6s;
+        }
+        .mySlides:nth-child(5) {
+            animation-delay: 8s;
+        }
+        
+
+        
+        
+
+
+</style>
+       
 </head>
 <body>
     <div class="carousel-container">
         <div class="carousel-slide">
-            <img class="mySlides" src="aud.jpeg" style="width: 800px;">
-            <img class="mySlides" src="images.jpeg" style="width: 800px;">
-            <img class="mySlides" src="img.jpeg" style="width: 800px;">
-            <img class="mySlides" src="images2.png" style="width:800px">
+            <img class="mySlides" src="aud.jpeg" >
+            <img class="mySlides" src="ca1.jpeg" >
+            <img class="mySlides" src="ca2.jpeg" >
+            <img class="mySlides" src="ca3.jpeg" >
+            <img class="mySlides" src="ca4.jpeg" >
+            <img class="mySlides" src="ca5.jpeg" >
+            <img class="mySlides" src="ca6.jpeg" >
+            <img class="mySlides" src="ca7.jpeg" >
+            <img class="mySlides" src="ga2.jpeg" >
+            <img class="mySlides" src="ga3.jpeg" >
+            <img class="mySlides" src="ga4.jpeg" >
+            <img class="mySlides" src="ga5.jpeg" >
+            <img class="mySlides" src="ga6.jpeg" >
         </div>
+        <!-- Orange -->
+<div class="progress">
+    <div class="progress-bar bg-warning" style="width:40%"></div>
+ </div>
+ 
+ <!-- Red -->
+ <div class="progress">
+   <div class="progress-bar bg-danger" style="width:50%"></div>
+ </div>
     <script>
+        
         let slideIndex = 0;
         showSlides();
+        let progress = document.querySelector('.progress');
+        let progressBar = document.querySelector('.progress-bar');
+        let width = 0;
+        let id = setInterval(frame, 20);
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+            } else {
+                width++;
+                progressBar.style.width = width + '%';
+            }
+
+        }
+        // function myMove()
+        function myMove() {
+            let elem = document.getElementById("myBar");
+            let width = 1;
+            let id = setInterval(frame, 10);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                } else {
+                    width++;
+                    elem.style.width = width + '%';
+                }
+            }
+        }
 
         function showSlides() {
             let i;
@@ -35,6 +148,7 @@
             slides[slideIndex-1].style.display = "block";
             setTimeout(showSlides, 2000); // Change image every 2 seconds
         }
+
     </script>
 </body>
 </html>
