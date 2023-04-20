@@ -1,3 +1,4 @@
+"use strict";
 // scriviamo in javascript un codice atto a mostrarmi l'anno attuale in una struttura HTML all'interno di un tag<p>
 var d = new Date();
 var anno = d.getFullYear();

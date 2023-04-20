@@ -1,0 +1,16 @@
+<h1> Aggiungere nuovo articoli </h1>
+
+
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <label>Titolo </label>
+    <input type="text" [formControl]="titleToAdd">
+
+    <br>
+
+    <label>Prezzo</label>
+    <input type="number" [formControl]="priceToAdd">
+
+    <br>
+
+    <button class="btn btn-primary" type="submit">Invia</button>
+</form>

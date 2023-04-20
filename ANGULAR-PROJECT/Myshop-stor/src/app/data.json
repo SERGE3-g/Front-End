@@ -1,0 +1,29 @@
+[
+  {
+      "id": 1,
+      "titoloArticolo": "Bicicletta",
+      "prezzoArticolo": 80,
+      "descrizion": "Bicicletta da corsa, usata ma in ottime condizioni",
+      "urlImg": "../assets/images/velo.jpeg",
+      "textAltImg": "Una bicicletta",
+      "dispo": false
+  },
+  {
+      "id": 2,
+      "titoloArticolo": "TV",
+      "prezzoArticolo": 230,
+      "descrizion": "TV 4K, 2 anni di garanzia",
+      "urlImg": "../assets/images/tv.jpeg",
+      "textAltImg": "Una TV",
+      "dispo": true
+  },
+  {
+      "id": 3,
+      "titoloArticolo": "Giocattolo",
+      "prezzoArticolo": 15,
+      "descrizion": "Giocattolo per bambini mai usato",
+      "urlImg": "../../assets/images/jouet.jpeg",
+      "textAltImg": "Un giocattolo",
+      "dispo": true
+  }
+]
