@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-dettagli',
@@ -6,11 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./dettagli.component.css']
 })
 export class DettagliComponent implements OnInit {
-  id;
-  titolo: string;
-  prezzo: number;
-  descrizion: string;
-  urlImg: string;
+  id: any;
+  titolo!: string;
+  prezzo!: number;
+  descrizion!: string;
+  urlImg!: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -30,4 +32,4 @@ export class DettagliComponent implements OnInit {
 
 }
 
-}
+

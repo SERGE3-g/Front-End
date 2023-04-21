@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-articoli',
@@ -8,16 +8,16 @@ import { Component } from '@angular/core';
 export class ArticoliComponent implements OnInit {
 
   totalNbrLike: number = 0;
-  comment: string = "Ceci est un commentaire";
+  comment: string = "questi sono i commenti";
   @Output() info = new EventEmitter<string>();
 
-  @Input() titreArticle: string;
-  @Input() prixArticle: number;
-  @Input() description: string;
+  @Input() titoloArticolo: string;
+  @Input() prezzoArticolo: number;
+  @Input() descrizion: string;
   @Input() urlImg: string;
   @Input() textAltImg: string;
   @Input() dispo: boolean;
-  @Input() idArticle: number;
+  @Input() idArticolo: number;
   like: boolean = true;
 
   constructor() { }
@@ -33,7 +33,7 @@ export class ArticoliComponent implements OnInit {
       this.totalNbrLike--;
       this.like = true;
     }
-    this.info.emit(this.titreArticle);
+    this.info.emit(this.titoloArticolo);
   }
 
   getColor() {
