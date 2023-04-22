@@ -2,12 +2,12 @@
   <img [src]="urlImg" [alt]="textAltImg">
   <div class="card-body">
       <h5 class="card-title" [ngStyle]="{ color: getColor() }">
-          {{ titreArticle | uppercase }}
+          {{ titoloArticoli | uppercase }}
           <span *ngIf="dispo === false;"> - Non Disponibile</span>
       </h5>
-      <h6 class="card-title">{{ prixArticle }} €</h6>
+      <h6 class="card-title">{{ prezzoArticoli }} €</h6>
       <p class="card-text">Descrizione</p>
-      <a routerLink="/details/{{ idArticle }}"> => Vedi l'articolo : {{ idArticle }}</a>
+      <a routerLink="/details/{{ idArticoli }}"> => Vedi l'articolo : {{ idArticoli }}</a>
       <hr>
       <button (click)="onLike()" [ngClass]="
           {
@@ -19,8 +19,8 @@
 
       <button class="nolike" (click)="onLike()" [ngClass]="
           {
-              'show': jaime === false,
-              'hidden': jaime === true
+              'show': like === false,
+              'hidden': like === true
           }">
           non mi piace
       </button>

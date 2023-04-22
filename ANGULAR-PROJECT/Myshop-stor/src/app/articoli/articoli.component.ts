@@ -11,13 +11,14 @@ export class ArticoliComponent implements OnInit {
   comment: string = "questi sono i commenti";
   @Output() info = new EventEmitter<string>();
 
-  @Input() titoloArticolo: string;
-  @Input() prezzoArticolo: number;
-  @Input() descrizion: string;
+  @Input() titoloArticoli: string;
+  @Input() prezzoArticoli: number;
+  @Input()
+  description!: string;
   @Input() urlImg: string;
   @Input() textAltImg: string;
   @Input() dispo: boolean;
-  @Input() idArticolo: number;
+  @Input() idArticoli: number;
   like: boolean = true;
 
   constructor() { }
@@ -33,7 +34,7 @@ export class ArticoliComponent implements OnInit {
       this.totalNbrLike--;
       this.like = true;
     }
-    this.info.emit(this.titoloArticolo);
+    this.info.emit(this.titoloArticoli);
   }
 
   getColor() {

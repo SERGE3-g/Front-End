@@ -9,7 +9,7 @@ import { filter, map } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit, OnDestroy {
   secondes: any;
-  compteurSubscription: Subscription;
+  compteurSubscription: Subscription | undefined;
   constructor() { }
 
   ngOnInit() {
@@ -29,7 +29,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.compteurSubscription.unsubscribe();
+    this.compteurSubscription?.unsubscribe();
+
   }
 
 }

@@ -1,0 +1,22 @@
+.footer {
+  background-color: #f5f5f5;
+  padding: 40px 0;
+}
+
+.title-par {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.body-par {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.footer .footer-links {
+  padding-left: 0;
+  list-style: none;
+}
