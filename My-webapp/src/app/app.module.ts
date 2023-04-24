@@ -12,6 +12,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ChiSiamoComponent } from './chi-siamo/chi-siamo.component';
 import { MissionComponent } from './mission/mission.component';
+import { TerminiECondizioniComponent } from './termini-e-condizioni/termini-e-condizioni.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MissionComponent } from './mission/mission.component';
     SidebarComponent,
     FooterComponent,
     ChiSiamoComponent,
-    MissionComponent
+    MissionComponent,
+    TerminiECondizioniComponent
   ],
   imports: [
     BrowserModule,

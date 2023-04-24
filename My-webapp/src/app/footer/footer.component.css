@@ -1,6 +1,7 @@
 .footer {
   background-color: #24cbbe;
   padding: 40px 0;
+
 }
 
 .title-par {
@@ -13,7 +14,7 @@
 .body-par {
   font-size: 14px;
   line-height: 1.8;
-  color: #666;
+  color: #fff;
 }
 
 .footer-contact {
@@ -30,14 +31,14 @@
 .footer-contact p {
   font-size: 14px;
   line-height: 1.8;
-  color: #666;
+  color: white;
 }
 
 .footer-contact .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #37a7a7;
-  color: #2ea1a8;
+  background: #fff;
+  color: #fff;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -49,8 +50,8 @@
 }
 
 .footer-contact .social-links a:hover {
-  background: #1f96ab;
-  color: #41c9d8;
+  background: white;
+  color: white;
 }
 
 .footer-links {
@@ -84,7 +85,7 @@
 }
 
 .footer-links ul a {
-  color: #666;
+  color: #fff;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
@@ -128,7 +129,7 @@
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #ffbb2c;
+  background: #2ac4bf;
   color: #2d9c96;
   transition: 0.3s;
   border-radius: 0 3px 3px 0;
