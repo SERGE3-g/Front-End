@@ -1,0 +1,37 @@
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.generic-paragraph-div {
+  padding: 40px 0;
+}
+.generic-paragraph-div h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.generic-paragraph-div p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+}
+.generic-paragraph-div .title-par {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.generic-paragraph-div .body-par {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+}
