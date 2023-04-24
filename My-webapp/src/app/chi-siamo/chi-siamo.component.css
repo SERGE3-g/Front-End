@@ -1,37 +1,67 @@
-h2 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+/*#contenitore{
+  width: 1100px;
+  margin: auto;
+
 }
-p {
-  font-size: 14px;
-  line-height: 1.8;
-  color: #666;
+p{
+  font-size: 18px;
+  line-height: 2;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 
-.generic-paragraph-div {
-  padding: 40px 0;
+
+#contenitore {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: justify;
 }
-.generic-paragraph-div h2 {
+
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h4 {
   font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
-.generic-paragraph-div p {
-  font-size: 14px;
-  line-height: 1.8;
-  color: #666;
+
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #333;
 }
-.generic-paragraph-div .title-par {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+
+
+@media screen and (max-width: 768px) {
+  #contenitore {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.2;
+  }
 }
-.generic-paragraph-div .body-par {
-  font-size: 14px;
-  line-height: 1.8;
-  color: #666;
-}
+
+

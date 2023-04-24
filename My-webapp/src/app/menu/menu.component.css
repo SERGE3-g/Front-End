@@ -1,0 +1,30 @@
+#totale{
+  width: 1100px;
+  margin:auto;
+}
+.quadrato{
+  width: 300px;
+  height: 90px;
+  background-color: rgb(255, 187, 1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+i{
+  margin-right: 10px;
+  color:white;
+  font-size: 30px;
+}
+#secondariga{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+#primariga{
+  display: flex;
+  justify-content: space-between;
+}
+p{
+  font-size: 18px;
+}

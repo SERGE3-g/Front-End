@@ -1,141 +1,112 @@
-.footer {
-  background-color: #24cbbe;
+/* Set the font family and size for the entire page */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Set the styles for the footer */
+footer {
+  background-color: #333;
+  color: #fff;
   padding: 40px 0;
-
 }
 
-.title-par {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+/* Set the styles for the container */
+footer .container {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.body-par {
-  font-size: 14px;
-  line-height: 1.8;
-  color: #fff;
+/* Set the styles for the columns */
+footer .col-md-6,
+footer .col-md-3 {
+  padding: 0 40px;
 }
 
-.footer-contact {
-  margin-bottom: 30px;
+/* Set the styles for the headings */
+footer h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.footer-contact h3 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-}
-
-.footer-contact p {
-  font-size: 14px;
-  line-height: 1.8;
-  color: white;
-}
-
-.footer-contact .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #fff;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-
-.footer-contact .social-links a:hover {
-  background: white;
-  color: white;
-}
-
-.footer-links {
-  margin-bottom: 30px;
-}
-
-.footer-links h4 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-}
-
-.footer-links ul {
+/* Set the styles for the lists */
+footer ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-.footer-links ul i {
-  padding-right: 2px;
-  color: #ffbb2c;
-  font-size: 18px;
-  line-height: 1;
+footer ul li {
+  margin-bottom: 10px;
 }
 
-.footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-.footer-links ul a {
+/* Set the styles for the links */
+footer ul li a {
   color: #fff;
-  transition: 0.3s;
-  display: inline-block;
-  line-height: 1;
+  text-decoration: none;
 }
 
-.footer-links ul a:hover {
+footer ul li a:hover {
   text-decoration: underline;
 }
 
-.footer-newsletter {
-  margin-bottom: 30px;
+/* Set the styles for the social media icons */
+footer .social-media {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-.footer-newsletter h4 {
+footer .social-media li {
+  margin-right: 10px;
+}
+
+footer .social-media li a {
+  color: #fff;
   font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  text-transform: uppercase;
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: right;
+  line-height: 40px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
 }
 
-.footer-newsletter form {
-  margin-top: 30px;
-  background: #2c87a8;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 3px;
+footer .social-media li a:hover {
+  background-color: #fff;
+  color: #333;
 }
 
-.footer-newsletter form input[type="email"] {
-  border: 0;
-  padding: 4px 8px;
-  width: calc(100% - 110px);
-}
+/* Set the media query for responsive design */
+@media screen and (max-width: 768px) {
+  footer .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
 
-.footer-newsletter form input[type="submit"] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: #2ac4bf;
-  color: #2d9c96;
-  transition: 0.3s;
-  border-radius: 0 3px 3px 0;
-}
+  footer .col-md-6,
+  footer .col-md-3 {
+    padding: 0;
+    margin-bottom: 20px;
+  }
 
-.footer-newsletter form input[type="submit"]:hover {
-  background: #37b2d0;
-  color: #20a1b2;
+  footer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  footer ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  footer .social-media li a {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
 }
