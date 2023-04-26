@@ -6,8 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-closeMenu() {
-throw new Error('Method not implemented.');
-}
+  "v1" : string[] = ["Approccio consultant"];
+  "v2": string[] = ["Istruttori d’eccellenzat"];
+  "v3": string[] = ["Flessibilità<"];
+  "v4": string[] = ["Formazione basata sull’assessment e valutazione"];
+  "v5": string[] = ["Focus sulla digital transformation e sulle tecnologie emergenti"];
+  constructor() { }
 
 }

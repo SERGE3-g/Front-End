@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { articolo } from './model/Articolo';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular-1';
+ myArticolo : articolo= new articolo();
+
+ constructor(){
+    this.myArticolo.titolo = "creare componenti in angular";
+    this.myArticolo.autore = "Mario Rossi";
+    this.myArticolo.testo = "Testo articolo di prova";
+  }
 }
