@@ -1,1 +1,20 @@
-<p>car-description works!</p>
+<h1 > {{car.model}} </h1>
+
+<h2 [class]="classCSS"> Titoletto </h2>
+
+<table border="1">
+    <tr>
+        <th [attr.colspan]="colspan"> Dati Film </th>
+
+    </tr>
+    <tr>
+        <td> Profondo Rosso </td>
+        <td> 1975 </td>
+        <td> Italia </td>
+    </tr>
+</table>
+
+<img [src]="car.img" alt="Alfa Romeo Giulia">
+<button [disabled]="!car.available" > Compra </button>
+
+

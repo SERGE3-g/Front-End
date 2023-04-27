@@ -1,0 +1,39 @@
+<form name="f1" >
+  <label> Seleziona la modalita: </label>
+  <select name="opzione" [(ngModel)]="option">
+      <option value="nessuno"> </option>
+      <option value="partitaIva"> Partita Iva </option>
+      <option value="codFiscale"> Codice Fiscale </option>
+  </select> <br><br>
+
+<!--
+  <div *ngIf="option == 'codFiscale' ">
+      <label> Codice Fiscale </label>
+      <input type="text" name="codFiscale" placeholder="Codice Fiscale" minlength="16" maxlength="16">
+  </div>
+  <div *ngIf="option == 'partitaIva'">
+      <label> Partita Iva </label>
+      <input type="text" name="partitaIva" placeholder="Partita Iva">
+      <label> Regione Sociale </label>
+      <input type="text" name="regSociale" placeholder="Regione Sociale">
+  </div>
+-->
+
+  <div [ngSwitch]="option">
+      <div *ngSwitchCase="'codFiscale'">
+          <label> Codice Fiscale </label>
+          <input type="text" name="codFiscale" placeholder="Codice Fiscale" minlength="16" maxlength="16">
+      </div>
+      <div *ngSwitchCase="'partitaIva'">
+          <label> Partita Iva </label>
+          <input type="text" name="partitaIva" placeholder="Partita Iva">
+          <label> Regione Sociale </label>
+          <input type="text" name="regSociale" placeholder="Regione Sociale">
+      </div>
+      <div *ngSwitchDefault>
+          <p> Scegli un opzione </p>
+      </div>
+  </div>
+
+
+</form>

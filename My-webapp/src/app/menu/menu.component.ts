@@ -6,11 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-  "v1" : string[] = ["Approccio consultant"];
-  "v2": string[] = ["Istruttori d’eccellenzat"];
-  "v3": string[] = ["Flessibilità<"];
-  "v4": string[] = ["Formazione basata sull’assessment e valutazione"];
-  "v5": string[] = ["Focus sulla digital transformation e sulle tecnologie emergenti"];
-  constructor() { }
+
+  paroleChiave = {
+    "v1": "Approccio consultant",
+    "v2": "Istruttori d’eccellenza",
+    "v3": "Flessibilità",
+    "v4": "Formazione basata sull’assessment e valutazione",
+    "v5": "Focus sulla digital transformation e sulle tecnologie emergenti"
+  }
+
+  sfondo: string = "yellow";
+
+  cambiaSfondo() {
+    let sfondi: string [] = ["red", "blue", "green", "purple", "pink"];
+    let num: number = Math.ceil(Math.random()*5);
+
+    this.sfondo = sfondi[num];
+  }
+
+  sfondoIniziale() {
+    this.sfondo = "yellow";
+  }
 
 }

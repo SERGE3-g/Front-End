@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StoreModule } from '@ngrx/store';
 import { UsersComponent } from './users/users.component';
 import { UserComponent } from './user/user.component';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { UserComponent } from './user/user.component';
     NgbModule,
     StoreModule.forRoot({}, {})
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ChiSiamoComponent } from './chi-siamo/chi-siamo.component';
 import { MissionComponent } from './mission/mission.component';
 import { TerminiECondizioniComponent } from './termini-e-condizioni/termini-e-condizioni.component';
+import { ContactformComponent } from './sidebar/contactform/contactform.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TerminiECondizioniComponent } from './termini-e-condizioni/termini-e-co
     FooterComponent,
     ChiSiamoComponent,
     MissionComponent,
-    TerminiECondizioniComponent
+    TerminiECondizioniComponent,
+    ContactformComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,51 @@
+NGIF e NGSTYLE
+
+<article *ngIf="mostra">
+    <h2> Titolo Articolo </h2>
+    <h3> Sottotitolo Articolo </h3>
+    <section>
+        <p> SEZIONE 1 </p>
+    </section>
+    <section>
+        <p> SEZIONE 2 </p>
+    </section>
+</article>
+
+<article [ngStyle]="css">
+    <h2> Titolo Articolo 2</h2>
+    <h3> Sottotitolo Articolo </h3>
+    <section>
+        <p> SEZIONE 1 </p>
+    </section>
+    <section>
+        <p> SEZIONE 2 </p>
+    </section>
+</article>
+
+<button (click)="mostraSezione();"> Mostra Sezione 1 </button>
+<button (click)="mostraSezione2();"> Mostra Sezione 2 </button>
+
+
+
+<br> <br>
+
+<!-- NGFOR -->
+<ul>
+    <li *ngFor="let ing of arr"> {{ing}} </li>
+</ul>
+
+for in no
+<ul>
+    <li *ngFor="let key in obj"> {{key}} </li>
+</ul>
+
+<ul>
+    <li *ngFor="let ing of arr; let i = index; let even = even;
+       let odd = odd" [ngClass]="{ even: even, odd: odd }">
+         {{ i }}. {{ ing | titlecase }}
+         <button class="delete" (click)="delete(ing)">Rimuovi</button>
+    </li>
+</ul>
+
+
+

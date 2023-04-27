@@ -27,23 +27,14 @@
       <th>Name</th>
       <th>Cognome</th>
       <th>Codicefiscale</th>
-      <th>province</th>
+      <th>provincia</th>
       <th>city</th>
       <th>Email</th>
       <th>Phone</th>
       <th>Age</th>
+      <th>Action</th>
     </tr>
   </thead>
-  <tr *ngFor="let user of users">
-
-    <td>{{ user.name }}</td>
-    <td>{{ user.cognome }}</td>
-    <td>{{ user.codicefiscale }}</td>
-    <td>{{ user.province }}</td>
-    <td>{{ user.city }}</td>
-    <td>{{ user.email }}</td>
-    <td>{{ user.phone }}</td>
-    <td>{{ user.age }}</td>
-
+  <tr app-user *ngFor="let user of users"[user-data]="user">
   </tr>
 </table>

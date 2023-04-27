@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Articolo } from '../model/Articolo';
+import { articolo } from '../model/Articolo';
 
 @Component({
   selector: 'app-articolo',
@@ -7,7 +7,7 @@ import { Articolo } from '../model/Articolo';
   styleUrls: ['./articolo.component.css']
 })
 export class ArticoloComponent {
-  @Input() art: Articolo = new Articolo();
+  @Input() art: articolo = new articolo();
 
   incrementaApprezzamenti(): void {
     ++this.art.numApprezzamenti;

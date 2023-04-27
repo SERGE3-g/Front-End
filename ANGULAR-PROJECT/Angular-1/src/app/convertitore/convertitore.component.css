@@ -1,0 +1,26 @@
+
+/* creo il css del convertitore */
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: left;
+}
+h1 {
+  font-size: 1.2em;
+  color: blue;
+}
+input {
+  width: 10ex;
+  text-align: right;
+}
+button {
+  margin-left: 10px;
+  background-color: chartreuse;
+}
+div {
+  margin: 10px 0;
+}
+span {
+  font-size: 1.2em;
+  color: red;
+}

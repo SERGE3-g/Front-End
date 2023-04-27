@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-users',
@@ -8,76 +9,18 @@ import { Component } from '@angular/core';
 
 export class UsersComponent {
   title = 'Users';
-  users = [
-    {
-      name: 'Serge',
-      cognome: 'Guea',
-      codicefiscale: 'GUESSRG99H01H501T',
-      province: 'RM',
-      email: 'guea@gmail.com',
-      phone: '3333333399',
-      city: 'Roma',
-      age : 24,
-    },
-    {
-      name: 'Serge1',
-      cognome: 'Guea',
-      codicefiscale: 'GUESSRG99H01H501T',
-      province: 'RM',
-      email: 'guea@gmail.com',
-      phone: '3333333399',
-      city: 'Roma',
-      age : 24,
-    },
-    {
-      name: 'Marco',
-      cognome: 'Boscia',
-      codicefiscale: 'GUESSRG99H01H501T',
-      province: 'RM',
-      email: 'marco@gmail.com',
-      phone: '3333333395',
-      city: 'Gaeta',
-      age : 28,
-    },
-    {
-      name: 'Serge3',
-      cognome: 'Guea',
-      codicefiscale: 'GUESSRG99H01H501T',
-      province: 'RM',
-      email: 'guea@gmail.com',
-      phone: '3333333333',
-      city: 'Roma',
-      age : 24,
-    },
-    {
-      name: 'Serge4',
-      cognome: 'Guea',
-      codicefiscale: 'GUESSRG99H01H501T',
-      province: 'RM',
-      email: 'guea@gmail.com',
-      phone: '3333333333',
-      city: 'Roma',
-      age : 24,
-    },
-    {
-      name: 'Serge5',
-      cognome: 'Guea',
-      codicefiscale: 'GUESSRG99H01H501T',
-      province: 'RM',
-      email: 'guea@gmail.com',
-      phone: '3333333333',
-      city: 'Roma',
-      age : 24,
-    },
-    {
-      name: 'Valerio',
-      cognome: 'Amato',
-      codicefiscale: 'GUESSRG99H01H501T',
-      province: 'RM',
-      email: 'guea@gmail.com',
-      phone: '3333333353',
-      city: 'Roma',
-      age : 30,
-    },
-  ];
+  users: any [] = [];
+
+  // creo il costruttore per poter usare il servizio
+  constructor( private service : UserService) {
+
+    this.users = service.getUsers();
+  }
+  ngOnInit(): void {
+    this.users = this.service.getUsers();
+  }
+  // creo il metodo ngOnInit per poter inizializzare il componente dopo che il costruttore è stato chiamato
+  onCancellaUser(user: any) {
+    this.service.cancellaUser(user);
+  }
 }

@@ -1,0 +1,11 @@
+<p [class]="componentClasses" > PROPERTY DATA BINDING </p>
+<p class="pluto pippo" [attr.class]="componentClasses"> BINDING SUGLI ATTRIBUTI </p>
+<p [ngClass]="componentClasses"> BINDING SUGLI ATTRIBUTI USANDO DIRETTIVA NGCLASS </p>
+
+<!--
+    Evitare attr.class
+-->
+
+<p [style.color]="bgcolor" > PROPERTY DATA BINDING </p>
+<p [attr.style]="bgcolor2"> BINDING SUGLI ATTRIBUTI </p>
+<p [ngStyle]="componentStyle"> BINDING SUGLI ATTRIBUTI USANDO DIRETTIVA NGSTYLE </p>

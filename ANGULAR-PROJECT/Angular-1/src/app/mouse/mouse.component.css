@@ -1,0 +1,18 @@
+.container{
+  display: grid;
+  width: 300px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.box {
+  grid-column: 1 / -1;
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+}
+
+span {
+  font-size: 2em;
+  grid-row: 2 / -1;
+}

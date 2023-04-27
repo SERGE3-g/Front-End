@@ -1,4 +1,4 @@
-export class Articolo {
+export class articolo {
   titolo: string;
   autore: string;
   testo: string;

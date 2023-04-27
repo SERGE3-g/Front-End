@@ -1,1 +1,46 @@
-<p>user works!</p>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    color: #4d4d4d;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    text-align: left;
+  }
+  th {
+    background-color: #5fbbc0;
+    color: white;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2
+  }
+  td {
+    border: 1px solid #5fbbc0;
+    padding: 5px;
+  }
+
+  button {
+    color: #5fbbc0;
+    border: 1px solid #5fbbc0;
+    padding: 5px 10px;
+    width: 120px;
+
+  }
+  button.delete {
+    background-color: #ff0000;
+    border: 1px solid #ff0000;
+  }
+</style>
+
+<td>{{ user.name }}</td>
+<td>{{ user.cognome }}</td>
+<td>{{ user.codicefiscale }}</td>
+<td>{{ user.provincia }}</td>
+<td>{{ user.city }}</td>
+<td>{{ user.email }}</td>
+<td>{{ user.phone }}</td>
+<td>{{ user.age }}</td>
+<td>
+  <button (click)="deleteUser(user.id)" class="delete">Delete</button>
+</td>
+
