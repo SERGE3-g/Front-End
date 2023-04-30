@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { User } from '../interfaces/user';
 
 // importo il servizio per poterlo usare nel costruttore della classe UsersComponent
 @Injectable({
@@ -7,7 +8,7 @@ import { Injectable } from '@angular/core';
 // creo la classe UsersComponent
 export class UserService {
   // creo un array di oggetti
-users = [
+users:  User[] = [
   {
     name: 'Serge',
     cognome: 'Guea',
@@ -82,26 +83,30 @@ users = [
 
 // creo un metodo per ottenere l'array di oggetti
 getUsers() {
-
   return this.users;
 }
 // creo un metodo per cancellare un utente
-cancellaUser(user: any) {
+cancellaUser (user: User) {
   const index = this.users.indexOf(user);
   if (index > -1) {
-    this.users.splice(index, 1);
+    this.users.splice(index,1);
+
+  }
+  else {
+    alert('utente non trovato');
+
   }
 }
 
   // creo un metodo per modificare un utente
-  modificaUser(user :any) {
+  modificaUser(user :User) {
     const index = this.getUsers().indexOf(user);
     this.getUsers()[index] = user;
 
   }
 
   // creo un metodo per aggiungere un utente
-  aggiungiUser(user :any) {
+  aggiungiUser(user :User) {
     this.getUsers().push(user);
 
     }

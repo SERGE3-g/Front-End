@@ -13,12 +13,13 @@
       <th>Actions</th>
       <th>modifica</th>
       <th>Aggiungi</th>
+      <th> Cancella</th>
     </tr>
   </thead>
     <tr app-user
       *ngFor="let user of users"[user-data]="user"
-      (onCancellaUser)="OncancellaUser($event)"
-      (onModificaUser)="OnmodificaUser($event)"
-      (onAggiungiUser)="OnaggiungiUser($event)">
+      (onCancellaUser)="onCancellaUser($event)"
+      (onSelectUser) ="onSelectUser($event)"
+      (onAggiungiUser)="Onaggiungi($event)">
     </tr>
 </table>

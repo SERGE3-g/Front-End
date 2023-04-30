@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user.service';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { UserService } from '../services/user.service';
+import { User } from '../interfaces/user';
 
 @Component({
   selector: 'app-users',
@@ -8,8 +9,11 @@ import { UserService } from '../user.service';
 })
 
 export class UsersComponent implements OnInit {
+
+
   title = 'Users';
-  users: any [] = [];
+  public users: User[] = [];
+  @Output('modificaUser') modificaUser = new EventEmitter<User>();
 
   // creo il costruttore per poter usare il servizio
   constructor( private service : UserService) {
@@ -20,13 +24,17 @@ export class UsersComponent implements OnInit {
     this.users = this.service.getUsers();
   }
   // creo il metodo ngOnInit per poter inizializzare il componente dopo che il costruttore è stato chiamato
-  onCancellaUser(user: any) {
+  onCancellaUser(user: User) {
     this.service.cancellaUser(user);
   }
-  Onmodifica (user: any) {
-    this.service.modificaUser(user);
-  }
-  Onaggiungi (user: any) {
+
+  onSelectUser(user: User){
+    console.log('selected user',user);
+        this.modificaUser.emit(user);
+
+      }
+
+  Onaggiungi (user: User) {
     this.service.aggiungiUser(user);
   }
 }

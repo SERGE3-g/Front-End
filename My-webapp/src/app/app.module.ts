@@ -14,6 +14,7 @@ import { ChiSiamoComponent } from './chi-siamo/chi-siamo.component';
 import { MissionComponent } from './mission/mission.component';
 import { TerminiECondizioniComponent } from './termini-e-condizioni/termini-e-condizioni.component';
 import { ContactformComponent } from './sidebar/contactform/contactform.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ContactformComponent } from './sidebar/contactform/contactform.componen
     AppRoutingModule,
     StoreModule.forRoot({}, {}),
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

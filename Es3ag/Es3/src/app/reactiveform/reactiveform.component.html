@@ -1,0 +1,75 @@
+
+<menu type="toolbar">
+  <button mat-button routerLink="/home">Home</button>
+  <button mat-button routerLink="/about">About</button>
+  <button mat-button routerLink="/contact">Contact</button>
+  <button mat-button routerLink="/cart">Cart</button>
+  <button mat-button routerLink="/login">Login</button>
+  <button mat-button routerLink="/register">Register</button>
+  <button mat-button routerLink="/admin">Admin</button>
+  <button mat-button routerLink="/admin/products">Products</button>
+  <button mat-button routerLink="/admin/orders">Orders</button>
+  <button mat-button routerLink="/admin/users">Users</button>
+  <button mat-button routerLink="/admin/cate ">Categories</button>
+ </menu>
+
+
+
+<form novalidate [formGroup]="reactiveForm">
+  <div class="form-row">
+      <div class="col-md-4 mb-2">
+          <label for="name">Nome</label>
+          <input type="text" formControlName="name" />
+      </div>
+      <div class="col-md-4 mb-2">
+          <label for="mail">E-mail</label>
+          <input type="email" formControlName="mail" />
+      </div>
+      <div class="col-md-4 mb-2">
+          <label for="dayOfTheWeek">Giorno della settimana</label>
+          <select formControlName="dayOfTheWeek">
+              <option *ngFor="let day of daysOfTheWeek" [value]="day">
+                  {{ day }}
+              </option>
+          </select>
+      </div>
+  </div>
+  <div class="form-row" formGroupName="fullAddress">
+      <!-- Nested form group -->
+      <div class="col-md-4 mb-2">
+          <label for="address">Indirizzo</label>
+          <input type="text" formControlName="address" />
+      </div>
+      <div class="col-md-4 mb-2">
+          <label for="city">Citt&agrave;</label>
+          <input type="text" formControlName="city" />
+      </div>
+      <div class="col-md-4 mb-2">
+          <label for="zipCode">CAP</label>
+          <input type="text" formControlName="zipCode" />
+      </div>
+  </div>
+  <div class="form-row mt-3 mb-3">
+      <div class="form-check form-check-inline" *ngFor="let office of availableOffices">
+          <input type="radio" formControlName="office" />
+          <label for="office" class="form-check-label">
+              Ufficio {{ office.id }}
+          </label>
+      </div>
+  </div>
+  <div class="form-row mt-3 mb-3">
+      <div class="form-check form-check-inline" *ngFor="let application of applications; let i = index" formGroupName="applications">
+          <input type="checkbox" formControlName="application_{{ application.id }}" />
+          <label for="application" class="form-check-label">
+              Richiesta {{ application.id }}
+          </label>
+      </div>
+  </div>
+  <div class="form-row">
+      <button type="submit" class="btn btn-primary">Prenota</button>
+  </div>
+</form>
+
+<br />
+
+<pre><code>{{ reactiveForm.value | json }}</code></pre>

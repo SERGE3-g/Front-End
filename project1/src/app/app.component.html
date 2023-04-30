@@ -1,5 +1,8 @@
-<app-users></app-users>
-
-
-
-
+<div class="main">
+  <div class="users">
+    <app-users (updateUser) = "modificaUser($event)"></app-users>
+  </div>
+  <div class="userDetail" *ngIf="true">
+    <app-user-detail></app-user-detail>
+  </div>
+</div>

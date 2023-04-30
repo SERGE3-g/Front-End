@@ -1,12 +1,14 @@
-<td>{{ user.name }}</td>
-<td>{{ user.cognome }}</td>
-<td>{{ user.codicefiscale }}</td>
-<td>{{ user.province }}</td>
-<td>{{ user.city }}</td>
-<td>{{ user.email }}</td>
-<td>{{ user.phone }}</td>
-<td>{{ user.age }}</td>
+<td>{{ user?.name }}</td>
+<td>{{ user?.cognome }}</td>
+<td>{{ user?.codicefiscale }}</td>
+<td>{{ user?.province }}</td>
+<td>{{ user?.city }}</td>
+<td>{{ user?.email }}</td>
+<td>{{ user?.phone }}</td>
+<td>{{ user?.age }}</td>
 
 <td><button class="cancella" (click)="cancellaUser()">CANCELLA</button></td>
 <td><button class="aggiungi" (click)="aggiungiUser()">AGGIUNGI</button></td>
+<td><button class="modifica" (click)="modificaUser()">MODIFICA</button></td>
+
 

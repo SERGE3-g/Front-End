@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
-h1 {
-  border: 1px solid green;
+.main{
+  width:98%;
+  margin:auto;
+  vertical-align: top;
+}
+.users{
+  float: left;
+  width: 60%;
+}
+.userDetail{
+  float: left;
+  width:40%;
 }

@@ -1,179 +1,165 @@
-.container {
-  width: 100%;
-  height: 100%;
-  background-color: #f2f2f2;
-  padding: 20px;
-  margin: 0 auto;
-}
-
+/* Contact Form CSS  prima version*/
+/*
 .form {
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 20px;
   padding: 20px;
-  margin: 0 auto;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
 }
 
 .form h3 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #000;
-  margin-bottom: 10px;
-}
-
-.form p {
-  font-size: 14px;
-  font-weight: 400;
-  color: #000;
-  margin-bottom: 10px;
-}
-
-.form h4 {
-  font-size: 16px;
-  font-weight: 600;
-  color: #000;
-  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .form label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #000;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-.form input,
-.form select {
+.form input[type="text"], .form select {
   width: 100%;
-  height: 40px;
+  padding: 10px;
+  font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0 10px;
+  border-radius: 4px;
   margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #000;
 }
 
-.form input[type="text"],
-.form input[type="number"],
-.form input[type="email"],
-.form input[type="password"],
 .form select {
-  width: 100%;
-  height: 40px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0 10px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #000;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.293 7.293a1 1 0 00-1.414 0L12 13.586 6.707 8.293a1 1 0 10-1.414 1.414l6 6a1 1 0 001.414 0l6-6a1 1 0 000-1.414z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
 }
 
-.form input[type="text"]:focus,
-.form input[type="number"]:focus,
-.form input[type="email"]:focus,
-.form input[type="password"]:focus,
-.form select:focus {
-  outline: none;
-  border: 1px solid #000;
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
 }
 
 .form input[type="submit"] {
-  width: 100%;
-  height: 40px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
   border: none;
-  border-radius: 5px;
-  padding: 0 10px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
-  background-color: #000;
+  border-radius: 4px;
   cursor: pointer;
-}
-
-textarea{
-  width: 100%;
-  height: 100px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #000;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .form input[type="submit"]:hover {
-  background-color: #000;
+  background-color: #3e8e41;
 }
 
-.form input[type="submit"]:focus {
-  outline: none;
-  background-color: #000;
+.form .error {
+  border-color: red;
 }
 
-.form .column {
-  width: 100%;
-  float: left;
-  padding: 0 10px;
+.form .success {
+  border-color: green;
 }
 
-.form .column:last-child {
-  padding-right: 0;
-}
-
-.form .column label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form .column input[type="text"],
-.form .column input[type="number"],
-.form .column input[type="email"],
-.form .column input[type="password"],
-.form .column select {
-  width: 100%;
-  height: 40px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0 10px;
-  margin-bottom: 20px;
+.form .error-message {
+  color: red;
   font-size: 14px;
-  font-weight: 400;
-  color: #000;
-}
-
-.form .column input[type="text"]:focus,
-.form .column input[type="number"]:focus,
-.form .column input[type="email"]:focus,
-.form .column input[type="password"]:focus,
-.form .column select:focus {
-  outline: none;
-  border: 1px solid #000;
-}
-
-.form .column input[type="submit"] {
-  width: 100%;
-  height: 40px;
-  border: none;
-  border-radius: 5px;
-  padding: 0 10px;
   margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
-  background-color: #000;
-  cursor: pointer;
 }
+*/
 
-.form .column input[type="submit"]:hover {
-  background-color: #000;
-}
+         /*seconda versione*/
 
-.form .column input[type="submit"]:focus {
-  outline: none;
-  background-color: #000;
-}
+         .form {
+          font-family: Arial, sans-serif;
+          margin: 10px;
+          padding: 10px;
+          background-color: #f7f7f7;
+          border: 1px solid #ccc;
+        }
+
+        .form h3 {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+
+        .form label {
+          display: block;
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        .form input[type="text"], .form select, .form textarea {
+          width: 70%;
+          padding: 10px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          margin-bottom: 20px;
+        }
+
+        .form select {
+          appearance: none;
+          -webkit-appearance: none;
+          background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.293 7.293a1 1 0 00-1.414 0L12 13.586 6.707 8.293a1 1 0 10-1.414 1.414l6 6a1 1 0 001.414 0l6-6a1 1 0 000-1.414z"/></svg>');
+          background-repeat: no-repeat;
+          background-position: right 10px center;
+        }
+
+        .form textarea {
+          height: 120px;
+        }
+
+        .form input[type="submit"] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .form input[type="submit"]:hover {
+          background-color: #3e8e41;
+        }
+
+        .form .error {
+          border-color: red;
+        }
+
+        .form .success {
+          border-color: green;
+        }
+
+        ul {
+          list-style-type: none;
+          margin: 20px;
+          padding: 0;
+        }
+
+        ul li {
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+
+
+
+
+
+
+
+
+

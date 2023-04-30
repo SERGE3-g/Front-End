@@ -1,0 +1,52 @@
+/* Style for the form */
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Style for form rows */
+.form-row {
+  margin-bottom: 20px;
+}
+
+/* Style for labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Style for input fields */
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Style for radio and checkbox labels */
+.form-check-label {
+  margin-left: 5px;
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style for the JSON output */
+pre {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+}

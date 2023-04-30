@@ -1,0 +1,11 @@
+<h1>Cart</h1>
+
+<ul>
+  <li *ngFor="let cartItem of cartItems">
+    {{ cartItem.name }} - {{ cartItem.price | currency:'USD':'symbol' }} x {{ cartItem.quantity }}
+  </li>
+</ul>
+
+<p>Total: {{ total | currency:'USD':'symbol' }}</p>
+
+<button (click)="checkout()">Checkout</button>

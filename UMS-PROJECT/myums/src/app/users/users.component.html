@@ -35,6 +35,7 @@
       <th>Action</th>
     </tr>
   </thead>
-  <tr app-user *ngFor="let user of users"[user-data]="user">
+  <tr app-user *ngFor="let user of users"[user-data]="user"
+    (onCancellaUser)="onCancellaUser($event)">
   </tr>
 </table>

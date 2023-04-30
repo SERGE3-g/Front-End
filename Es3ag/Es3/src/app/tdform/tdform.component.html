@@ -1,0 +1,57 @@
+<form novalidate #form="ngForm">
+  <div class="form-row">
+    <div class="col-md-4 mb-2">
+      <label for="name">Nome</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Inserisci il tuo nome"
+        [(ngModel)]="model.name" required minlength="2">
+    </div>
+    <div class="col-md-4 mb-2">
+      <label for="mail">E-mail</label>
+      <input type="email" class="form-control" id="mail" name="mail" placeholder="Inserisci la tua e-mail"
+        [(ngModel)]="model.mail" required pattern="[a-z0-9._%+-]+@[a-z0-9-.]+\.[a-z]{2,}$">
+    </div>
+
+    <div class="col-md-4 mb-2">
+      <label for="dayOfTheWeek">Giorno della settimana</label>
+      <select name="dayOfTheWeek" id="dayOfTheWeek" class="form-control" [(ngModel)]="model.dayOfTheWeek">
+        <option *ngFor="let day of daysOfTheWeek" [value]="day">{{ day }}</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-row mt-3 mb-3">
+    <div class="form-check form-check-inline" *ngFor="let office of availableOffices">
+      <input type="radio" name="office" id="office-{{ office.id }}" class="form-check-input" value="{{ office.name }}"
+        [(ngModel)]="model.office">
+      <label for="office" class="form-check-label">Ufficio {{ office.id }}</label>
+    </div>
+  </div>
+  <div class="form-row mt-3 mb-3">
+    <div class="form-check form-check-inline" *ngFor="let app of model.applications; let i = index;">
+      <input type="checkbox" name="application{{ i }}" id="application-{{ i }}" class="form-check-input"
+        value="richiesta_{{ i }}" [(ngModel)]="app.application">
+      <label for="application" class="form-check-label">Richiesta {{ i }}</label>
+    </div>
+  </div>
+  <div class="form-row">
+    <button type="submit" class="btn btn-primary">Prenota</button>
+  </div>
+</form>
+
+<br>
+<pre>
+  <!-- Proprietà del campo di input -->
+  <!-- identificato dall'attributo name="name" -->
+  dirty? {{ form.form.controls['name'].dirty }}
+  pristine? {{ form.form.controls['name'].pristine }}
+  touched? {{ form.form.controls['name'].touched }}
+  untouched? {{ form.form.controls['name'].untouched }}
+  valid? {{ form.form.controls['name'].valid }}
+  invalid? {{ form.form.controls['name'].invalid }}
+</pre>
+
+
+<pre><code>{{ form.value | json }}</code></pre>
+
+<br>
+
+<pre><code>{{ model | json }}</code></pre>

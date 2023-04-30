@@ -27,9 +27,7 @@
   <button type="submit" [disabled]="contactForm.invalid">Submit</button>
 </form>-->
 
-
-<h1 style="text-align: center; background-color: green;"    (click)="mostraSezione();">Per compilare il modulo clicca qui grazie</h1>
-<div *ngIf="mostra" class="container">
+<!--<h1 style="text-align: center; background-color: green;"    (click)="mostraSezione();">Per compilare il modulo clicca qui grazie</h1>
     <div class="form">
         <h3>Contattaci</h3>
         <p>Compila questo modulo per aiutarci a comprendere le tue necessità. Ti ricontatteremo prima possibile</p>
@@ -45,8 +43,7 @@
                 </div>
                 <div class="column">
                     <label for="">Cognome*</label>
-                    <input type="text" name="cognome" placeholder="Inserisci il tuo cognome" minlength="16"
-                        maxlength="16">
+                    <input type="text" name="cognome" placeholder="Inserisci il tuo cognome" minlength="16" maxlength="16">
                 </div>
             </div>
 
@@ -113,4 +110,140 @@
             </div>
         </div>
     </div>
+    <div class="button">
+        <button type="submit" class="btn btn-primary">Invia</button>
+    </div>-->
+
+<!-- form prima version  -->
+
+<!--<div class="form">
+  <h3 [ngClass]="componentClasses"> Compila questo modulo per aiutarci a comprendere le tue necessità. Ti ricontatteremo prima possibile. </h3>
+  <form>
+      <label> Cognome: </label>
+      <input type="text" name="cognome" placeholder="Cognome" maxwidth="50" [ngClass]="cognomeInput"
+      (focus)="focus();" (focusout)="focusOut()"> <br>
+      <label> Nome: </label>
+      <input type="text" name="nome" placeholder="Nome"><br>
+      <label> Email: </label>
+      <input type="text" name="email" placeholder="Email"><br>
+      <label> Telefono: </label>
+      <input type="text" name="telefono" placeholder="Telefono"><br>
+      <div [ngStyle]="componentStyle">
+          <label> Ruolo richiedente in azienda: </label>
+          <select>
+              <option value="altro">Altro</option>
+              <option value="senior">Senior</option>
+              <option value="middle">Middle</option>
+              <option value="junior">Junior</option>
+              <option value="manager">Manager</option>
+              <option value="ceo">CEO</option>
+              <option value="web designer">web designer</option>
+          </select>
+      </div>
+      <div [ngStyle]="componentStyle">
+          <label>Come è venuto a conoscenza di Digital Thinks?</label>
+             <select name="opzione" >
+                        <option value="altro">Altro</option>
+                        <option value="google">Google</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="linkedin">Linkedin</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="twitter">Twitter</option>
+                        <option value="youtube">Youtube</option>
+                        <option value="commerciale">Commerciale</option>
+                        <option value="passaparole">Passaparole</option>
+                        <option value="social">Social</option>
+                        <option value="conoscenze">Conoscenze</option>
+          </select>
+
+          <div [ngStyle]="componentStyle">
+              <label>Altri Canali (Se non in lista) </label>
+              <input type="text" name="other" minlength="16" maxlength="16">
+            <div>
+              <label for="textarea">Cosa vuoi richiederci ?</label>
+              <textarea name="note" id="" cols="30" rows="10"></textarea>
+            </div>
+          </div>
+      </div>
+  </form>
+</div> -->
+
+<!-- form seconda versione -->
+
+<div class="form">
+  <h3 [ngClass]="componentClasses"> Compila questo modulo per aiutarci a comprendere le tue necessità. Ti ricontatteremo prima possibile.</h3>
+  <form>
+      <!--
+      <input type="radio" name="compilazione" value="manuale" [(ngModel)]="scelta"> Compilazione Manuale
+      <input type="radio" name="compilazione" value="auto" [(ngModel)]="scelta" > Compilazione Automatica
+      <br> <br>
+      -->
+      <input type="radio" name="compilazione" value="manuale" [ngModel]="scelta" (ngModelChange)="compilazione($event)"> Compilazione Manuale
+      <input type="radio" name="compilazione" value="auto" [ngModel]="scelta"  (ngModelChange)="compilazione($event)"> Compilazione Automatica
+      <br> <br>
+
+      <label> Cognome: </label>
+
+      <input type="text" name="cognome" placeholder="Cognome" maxwidth="50" [ngClass]="cognomeInput"
+          (focus)="focus();" (focusout)="focusOut()" [(ngModel)]="valoriForm.cognome"> <br><br>
+
+      <label> Nome: </label>
+      <input type="text" name="nome" placeholder="Nome" [(ngModel)]="valoriForm.nome"><br><br>
+      <label> Email: </label>
+      <input type="text" name="email" placeholder="Email" [(ngModel)]="valoriForm.email"><br><br>
+      <label> Telefono: </label>
+      <input type="text" name="telefono" placeholder="Telefono" [(ngModel)]="valoriForm.telefono"><br><br>
+      <div [ngStyle]="componentStyle">
+          <label> Ruolo richiedente in azienda: </label>
+          <select name="opzione" [(ngModel)]="valoriForm.option">
+              <option value="altro">Altro</option>
+              <option value="senior">Senior</option>
+              <option value="middle">Middle</option>
+              <option value="junior">Junior</option>
+              <option value="software developer">software developer</option>
+              <option value="manager">Manager</option>
+              <option value="ceo">CEO</option>
+              <option value="web designer">web designer</option>
+          </select>
+      </div>
+      <div [ngStyle]="componentStyle">
+          <label>Come è venuto a conoscenza di Digital web service</label>
+          <select name="opzione" [(ngModel)]="valoriForm.option">
+            <option value="altro">Altro</option>
+            <option value="google">Google</option>
+            <option value="facebook">Facebook</option>
+            <option value="linkedin">Linkedin</option>
+            <option value="instagram">Instagram</option>
+            <option value="twitter">Twitter</option>
+            <option value="youtube">Youtube</option>
+            <option value="commerciale">Commerciale</option>
+            <option value="passaparole">Passaparole</option>
+            <option value="social">Social</option>
+            <option value="conoscenze">Conoscenze</option>
+          </select>
+
+          <div [ngStyle]="componentStyle">
+            <label>Altri Canali (Se non in lista) </label>
+            <input type="text" name="other"  [(ngModel)]="valoriForm.altri" minlength="16" maxlength="16">
+          <div>
+            <label for="textarea">Cosa vuoi richiederci ?</label>
+            <textarea name="note" id="" [(ngModel)]="valoriForm.messaggio" cols="30" rows="10"></textarea>
+          </div>
+
+        </div>
+      </div>
+  </form>
 </div>
+<ul>
+  <li> {{valoriForm.cognome}} </li>
+  <li> {{valoriForm.nome}}</li>
+  <li> {{valoriForm.email}}</li>
+  <li> {{valoriForm.telefono}}</li>
+  <li> {{valoriForm.option}}</li>
+  <li> {{valoriForm.altri}}</li>
+  <li> {{valoriForm.messaggio}}</li>
+
+</ul>
+
+
+
