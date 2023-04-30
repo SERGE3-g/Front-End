@@ -7,6 +7,7 @@ import { User } from '../interfaces/user';
 })
 // creo la classe UsersComponent
 export class UserService {
+  [x: string]: any;
   // creo un array di oggetti
 users:  User[] = [
   {

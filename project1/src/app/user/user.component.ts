@@ -15,10 +15,22 @@ export class UserComponent implements OnInit {
 
 // dichiaro un evento di tipo alias esterno (onCancellaUser) che sarà iniettato da un componente padre
 @Output('onCancellaUser')  onCancellaUser = new EventEmitter();
-@Output('onModificaUser')  onModificaUser = new EventEmitter();
-@Output('onAggiungiUser')  onAggiungiUser = new EventEmitter();
 @Output('onSelectUser') onSelectUser = new EventEmitter();
-  constructor(private userService :UserService) { }
+@Output('onUpdateUser') onUpdateUser = new EventEmitter();
+
+  constructor(private userService :UserService) {
+      this.user = {
+        name : '',
+        cognome : '',
+        codicefiscale : '',
+        province : '',
+        city : '',
+        email : '',
+        phone : '',
+        age : 24,
+      }
+    }
+
 
   ngOnInit(): void {
   }
@@ -26,11 +38,8 @@ export class UserComponent implements OnInit {
     this.onCancellaUser.emit(this.user);
   }
 
-  aggiungiUser() {
-    this.onAggiungiUser.emit(this.user);
-    }
-    
-    modificaUser(){
+
+    updateUser(){
       console.log(this.user);
       this.onSelectUser.emit(this.user);
 

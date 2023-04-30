@@ -13,7 +13,7 @@ export class UsersComponent implements OnInit {
 
   title = 'Users';
   public users: User[] = [];
-  @Output('modificaUser') modificaUser = new EventEmitter<User>();
+  @Output('updateUser') updateUser = new EventEmitter<User>();
 
   // creo il costruttore per poter usare il servizio
   constructor( private service : UserService) {
@@ -30,11 +30,9 @@ export class UsersComponent implements OnInit {
 
   onSelectUser(user: User){
     console.log('selected user',user);
-        this.modificaUser.emit(user);
+        this.updateUser.emit(user);
 
-      }
-
-  Onaggiungi (user: User) {
-    this.service.aggiungiUser(user);
   }
+
+
 }
