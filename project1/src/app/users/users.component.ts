@@ -10,9 +10,10 @@ import { User } from '../interfaces/user';
 
 export class UsersComponent implements OnInit {
 
-
+  
   title = 'Users';
   public users: User[] = [];
+
   @Output('updateUser') updateUser = new EventEmitter<User>();
 
   // creo il costruttore per poter usare il servizio
@@ -20,9 +21,11 @@ export class UsersComponent implements OnInit {
 
     this.users = service.getUsers();
   }
+
   ngOnInit(): void {
     this.users = this.service.getUsers();
   }
+
   // creo il metodo ngOnInit per poter inizializzare il componente dopo che il costruttore è stato chiamato
   onCancellaUser(user: User) {
     this.service.cancellaUser(user);

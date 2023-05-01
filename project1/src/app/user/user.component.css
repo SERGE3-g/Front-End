@@ -1,23 +1,32 @@
+td,
+th {
+  padding: 5px;
+  border: 1px solid #fff;
+}
+
+th {
+  background: #d7c5c5;
+  color: green;
+
+}
+
 td {
-  border: 1px solid black;
-  padding: 5px;
+  background-color: silver;
   color: red;
-  background: green
-  ;
 }
 
-td{
-  background: silver;
-  color: brown;
-}
-
-button{
+button {
   padding: 5px;
-  border: 1px solid black;
-  width: 140px;
+  border: 1px solid #222;
+  width: 80px;
 }
 
-button.delete{
+button.cancella {
   background: white;
   color: red;
-}
+ }
+
+ button.update{
+  background-color: #fff;
+  color: green;
+ }

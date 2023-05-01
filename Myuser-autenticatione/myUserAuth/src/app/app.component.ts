@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { User } from './interfaces/user';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +6,5 @@ import { User } from './interfaces/user';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
-title = 'ciao';
-  name = 'serge';
-  userSelected: User | undefined;
-  updateUser(user: User){
-    this.userSelected = user;
-  }
-
-
+  title = 'myUserAuth';
 }

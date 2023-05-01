@@ -32,5 +32,10 @@
         "Virgilio"
     ],
     "livePreview.defaultPreviewPath": "/Exo/Traccia_1-11.html",
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "chatgpt-ai.accessToken": "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",
+    "chatgpt-ai.apiKey": "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",
+    "chatgpt-ai.timeoutLength": 1500,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "aiXcoder.showTrayIcon": true
 }

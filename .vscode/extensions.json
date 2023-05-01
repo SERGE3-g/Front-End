@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "github.copilot",
-        "mariusalchimavicius.json-to-ts"
+        "mariusalchimavicius.json-to-ts",
+        "pflannery.vscode-versionlens"
     ]
 }
