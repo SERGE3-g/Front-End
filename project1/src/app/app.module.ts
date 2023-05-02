@@ -8,6 +8,8 @@ import { UsersComponent } from './users/users.component';
 import { UserComponent } from './user/user.component';
 import { UserService } from './services/user.service';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

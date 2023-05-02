@@ -10,12 +10,27 @@ th {
 }
 
 th {
-  background: #000;
+  background: #4ad0eb;
   color: green;
 
 }
 
+.th .action {
+  background: #4ad0eb;
+  color: green;
+  text-align: center;
+}
+
 td {
   background-color: silver;
-  color: red;
+  color: rgb(63, 59, 59);
 }
+
+button {
+  padding: 5px;
+  border: 1px solid #5bb3cb;
+  width: 80px;
+}
+
+
+

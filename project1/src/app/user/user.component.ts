@@ -1,4 +1,4 @@
-import { User } from '../interfaces/user';
+import { User } from '../classes/user';
 import { UserService } from '../services/user.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
@@ -19,6 +19,7 @@ export class UserComponent implements OnInit {
 
   constructor(private userService :UserService) {
       this.user = {
+        id : 0,
         name : '',
         cognome : '',
         codicefiscale : '',

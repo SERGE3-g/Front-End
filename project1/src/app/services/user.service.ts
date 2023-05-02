@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { User } from '../interfaces/user';
+import { User } from '../classes/user';
+import { UserInterface } from '../interfaces/user';
 
 // importo il servizio per poterlo usare nel costruttore della classe UsersComponent
 @Injectable({
@@ -11,16 +12,18 @@ export class UserService {
   // creo un array di oggetti
 users:  User[] = [
   {
+    id : 1,
     name: 'Serge',
     cognome: 'Guea',
     codicefiscale: 'GUESSRG99H01H501T',
-    province: 'RM',
+    province: 'LT',
     email: 'guea@gmail.com',
     phone: '3333333333',
     city: 'Roma',
     age : 24,
   },
   {
+    id : 2,
     name: 'Serge1',
     cognome: 'Guea',
     codicefiscale: 'GUESSRG99H01H501T',
@@ -31,36 +34,40 @@ users:  User[] = [
     age : 24,
   },
   {
+    id : 3,
     name: 'Serge2',
     cognome: 'Guea',
     codicefiscale: 'GUESSRG99H01H501T',
-    province: 'RM',
+    province: 'FR',
     email: 'guea@gmail.com',
     phone: '3333333333',
     city: 'Roma',
     age : 24,
   },
   {
+    id : 4,
     name: 'Serge3',
     cognome: 'Guea',
     codicefiscale: 'GUESSRG99H01H501T',
-    province: 'RM',
+    province: 'PZ',
     email: 'guea@gmail.com',
     phone: '3333333333',
-    city: 'Roma',
+    city: 'potenza',
     age : 24,
   },
   {
+    id : 5,
     name: 'Serge4',
     cognome: 'Guea',
     codicefiscale: 'GUESSRG99H01H501T',
-    province: 'RM',
+    province: 'LT',
     email: 'guea@gmail.com',
     phone: '3333333333',
-    city: 'Roma',
+    city: 'Formia',
     age : 24,
   },
   {
+    id : 6,
     name: 'Serge5',
     cognome: 'Guea',
     codicefiscale: 'GUESSRG99H01H501T',
@@ -71,6 +78,7 @@ users:  User[] = [
     age : 24,
   },
   {
+    id : 7,
     name: 'Serge6',
     cognome: 'Guea',
     codicefiscale: 'GUESSRG99H01H501T',
@@ -99,16 +107,18 @@ cancellaUser (user: User) {
   }
 }
 
-  // creo un metodo per modificare un utente
-  modificaUser(user :User) {
-    const index = this.getUsers().indexOf(user);
-    this.getUsers()[index] = user;
+updateUser(user: UserInterface) {
+  const idx = this.users.findIndex(v => v.id === user.id);
 
+  if (idx !== -1) {
+    this.users[idx] = { ...user };
   }
+}
 
-  // creo un metodo per aggiungere un utente
-  aggiungiUser(user :User) {
-    this.getUsers().push(user);
+createUser(user: UserInterface) {
 
-    }
+  this.users.splice(0, 0, { ...user });
+
+}
+
 }
